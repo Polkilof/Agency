@@ -1,0 +1,133 @@
+/* header */
+.header-page{
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	color: $white;
+	z-index: 200;
+	background: $white;
+	padding: 18px 0;
+	border-bottom: 1px solid $blue;
+	transition: background .2s ease-in-out;
+	@include media("<tablet"){
+		padding: 0;
+	}
+	&.scrolled{
+		//background: $gray_cod;
+	}
+}
+.home{
+	.header-page{
+		//background: linear-gradient(180deg, #1A1919 13.26%, #1A1919 28.73%, rgba(26, 25, 25, 0.3) 77.9%, rgba(26, 25, 25, 0) 100%);
+		&.scrolled{
+			//background: $gray_cod;
+		}
+	}
+}
+.logo{
+	position: relative;
+	float: left;
+	width: 266px;
+	height: 72px;
+	background: url('#{$images}logo.png') no-repeat 50% 50%;
+	background-size: 100% auto;
+	overflow: hidden;
+	text-indent: -9999px;
+	margin: 0;
+	@include media("<tablet"){
+		width: 130px;
+		height: 50px;
+		margin: 0;
+	}
+	&__link{
+		display: block;
+		height: 100%;
+	}
+}
+
+.open-menu{
+	width: 56px;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transition: .5s ease-in-out;
+	cursor: pointer;
+	display: none;
+	padding: 14px 15px;
+	background: #1C2D72;
+	z-index: 100;
+	@include media("<tablet"){
+		display: block;
+	}
+	@include media("<phone"){}
+	span{
+		display: block;
+		border: solid transparent;
+		border-width: 0;
+		height: 2px;
+		position: relative;
+		cursor: pointer;
+		transition: all 0.3s ease-out;
+		background: $white;
+		background-clip: padding-box;
+		border-radius: 0;
+		margin-top: 10px;
+		&:before,
+		&:after{
+			position: absolute;
+			left: 0;
+			right: 0;
+			content: '';
+			top: -9px;
+			height: 2px;
+			background: $white;
+			transition: all 0.5s ease-out;
+			border-radius: 0;
+		}
+		&:after{top: 9px;}
+	}
+}
+
+.menu-opened{
+	@include media("<tablet"){
+		overflow: hidden;
+		.open-menu{
+			z-index:150;
+			span{
+				background: transparent;
+				&:before{
+					top: 0;
+					transform: rotate(135deg);
+				}
+				&:after{
+					top: 0;
+					transform: rotate(-135deg);
+				}
+			}
+		}
+		.main-nav{
+			opacity: 1;
+			right: 0;
+		}
+		.fader{
+			opacity: .45;
+			visibility: visible;
+		}
+	}
+}
+
+.fader{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: $gray;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s, visibility 0.3s;
+	z-index: 75;
+	cursor: pointer;
+}

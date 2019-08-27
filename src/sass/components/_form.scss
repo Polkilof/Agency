@@ -1,0 +1,289 @@
+.form{
+	&__row{
+		display: flex;
+		flex-flow: row wrap;
+		margin: 0 -12px;
+	}
+	&__col{
+		padding: 0 12px;
+		width: 50%;
+		@include media("<phone"){
+			width: 100%;
+		}
+		&.mb0{
+			@include media("<phone"){
+				padding-bottom: 12px;
+			}
+		}
+	}
+	&__box{
+		position: relative;
+		display: block;
+		z-index: 1;
+		margin-bottom: 24px;
+		@include media("<phone"){
+			margin-bottom: 16px;
+		}
+		&_valid{
+			.form__control{
+				border-color: #28CD6A !important;
+			}
+		}
+		&_error{
+			.form__control{
+				border-color: #FC4B4E !important;
+			}
+		}
+		&.input--filled{
+			.form__control{
+				border: 1px solid #EEECEC !important;
+			}
+		}
+		&.password{
+			.form__control{
+				padding-right: 40px;
+			}
+		}
+		&.mb0{
+			margin-bottom: 0;
+		}
+		&-container{
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			align-items: flex-start;
+			@include media("<phone"){
+				justify-content: flex-start;
+				align-items: center;
+				flex-flow: column;
+			}
+			.form-group-check{
+				text-align: left;
+				max-width: 300px;
+				@include media("<phone"){
+					max-width: 90%;
+					margin: 0 auto 24px;
+				}
+			}
+		}
+	}
+	&__label{
+		display: block;
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 500;
+		color: $gray;
+		text-align: left;
+		padding: 0;
+		margin: 0 0 4px;
+		@include media("<phone"){
+			font-size: 14px;
+		}
+	}
+}
+
+.form__control{
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	height: 44px;
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: 400;
+	padding: 10px 16px;
+	color: $gray_cod;
+	background-color: $white;
+	border: none;
+	border: 1px solid #EEECEC;
+	outline: none;
+	resize: none;
+	margin: 0;
+	border-radius: 3px;
+	transition: all .2s;
+	@include media("<phone"){}
+	&::-webkit-input-placeholder {
+		color: $gray;
+		opacity: 1;
+	}
+	&::-ms-input-placeholder {
+		color: $gray;
+		opacity: 1;
+	}
+	&::-moz-placeholder {
+		color: $gray;
+		opacity: 1;
+	}
+	&:focus{
+		outline: none;
+		box-shadow: none;
+		border: 1px solid $gray_cod;
+	}
+	&.type2{
+		color: $gray;
+		background-color: #FAFAFA;
+		border: 1px solid #FAFAFA;
+		&::-webkit-input-placeholder {
+			color: #B1B1B1;
+			opacity: 1;
+		}
+		&::-ms-input-placeholder {
+			color: #B1B1B1;
+			opacity: 1;
+		}
+		&::-moz-placeholder {
+			color: #B1B1B1;
+			opacity: 1;
+		}
+		&:focus{
+			outline: none;
+			box-shadow: none;
+			border: 1px solid $mercury;
+		}
+	}
+}
+textarea.form__control{
+	height: 144px;
+	resize: none;
+	&_small{}
+}
+
+.form-group{
+	position: relative;
+	margin: 0 auto;
+	&__control{
+		width: 100%;
+		margin-bottom: 24px;
+		@include media('<phone'){
+			margin-bottom: 16px;
+		}
+	}
+	&-check{
+		position: relative;
+	}
+	&-checkbox{
+		position: absolute;
+		opacity: 0;
+		visibility: hidden;
+		z-index: -1;
+		&:checked + label{
+			&:before{
+				content: '';
+				background-image: url(../images/check.svg);
+				background-repeat: no-repeat;
+				background-position: center;
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				border: 1px solid $orange;
+				background-color: $orange;
+			}
+		}
+	}
+	&-privacy{
+		display: flex;
+		cursor: pointer;
+		&:before{
+			content:'';
+			-webkit-appearance: none;
+			background-color: #fff;
+			border: 1px solid #EEECEC;
+			height: 24px;
+			width: 24px;
+			min-width: 24px;
+			border-radius: 3px;
+			display: inline-block;
+			vertical-align: middle;
+			cursor: pointer;
+			margin: 0 12px 0 0;
+		}
+		&.enable{
+			opacity: 1;
+		}
+	}
+	&-agree{
+		font-size: 12px;
+		line-height: 24px;
+		font-weight: 400;
+		color: $gray;
+		margin-bottom: 0;
+		> a{
+			color: $white;
+			&:hover{
+				color: $orange;
+			}
+		}
+	}
+}
+.password__view{
+	position: absolute;
+	top: 50%;
+	right: 16px;
+	transform: translate(0, -50%);
+	height: 20px;
+	width: 20px;
+	cursor: pointer;
+	z-index: 2;
+	background: url(../images/private-eye.svg) no-repeat 50% 50%;
+	background-size: 20px auto;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .3s,visibility .3s;
+	&:hover{
+		background-image: url(../images/private-eye_hover.svg);
+	}
+	&.active{
+		background-image: url(../images/private-eye_active.svg);
+	}
+}
+.password_enter{
+	.password__view{
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.regular-row{
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+	margin-bottom: 65px;
+	&_inputfields{
+		justify-content: space-between;
+		margin: 0 -15px;
+		@include media('<tablet'){
+			margin: 0 -10px;
+		}
+		@include media('<phone'){
+			margin: 0;
+			flex-wrap: wrap;
+		}
+		.form__box{
+			flex-basis: 100%;
+			padding: 0 15px 30px;
+			margin: 0;
+			@include media('<tablet'){
+				padding: 0 10px 20px;
+			}
+			@include media('<phone'){
+				padding: 0 0 16px;
+			}
+			&_group{
+				flex-basis: 49.3%;
+				@include media('<phone'){
+					flex-basis: 100%;
+				}
+				.form-group-check{
+					margin-bottom: 16px;
+					@include media('<phone'){
+						margin-bottom: 16px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.form-group-button-dis.btn-disable{
+	opacity: 0.7;
+	pointer-events: none;
+}

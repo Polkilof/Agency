@@ -1,0 +1,65 @@
+/* buttons */
+.btn{
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid transparent;
+	text-align: center;
+	border-radius: $btn-border-radius-base;
+	font-weight: $btn-font-weight;
+	font-size: $btn-font-size;
+	font-family: $font-family-base;
+	line-height: $btn-line-height;
+	padding: 10px 32px;
+	color: $btn-color;
+	width: auto;
+	min-width: $btn-min-width;
+	cursor: pointer;
+	transition: background .3s, color .3s, border-color .3s;
+	@include media("<phone"){
+		padding: 8px 24px;
+	}
+	&_lg{
+		width: 100%;
+		padding: 18px;
+	}
+	&.active:focus,
+	&.active:hover,
+	&:focus,
+	&:active,
+	&:hover{
+		box-shadow: none;
+		outline: none;
+	}
+}
+.btn_default{
+	background: $blue;
+	border: 1px solid $blue;
+	color: $white;
+	&:hover{
+		color: $blue;
+		background: $white;
+		border-color: $blue;
+	}
+	&:active{
+		color: $blue;
+		background: $white;
+		border-color: $blue;
+	}
+}
+.btn_info{
+	background: transparent;
+	border: 1px solid rgba($black, .35);
+	color: $black;
+	&:hover{
+		color: $black;
+		background: $white;
+		border-color: $black;
+	}
+	&:active{
+		color: $black;
+		background: $white;
+		border-color: $black;
+	}
+}
+/*end btn*/

@@ -1,0 +1,63 @@
+// vars
+$fonts: '../fonts/';
+$images: '../images/';
+
+// fonts
+$Roboto: 'Roboto', sans-serif;
+$Ubuntu: 'Ubuntu', sans-serif;
+
+$breakpoints: (
+	phone-xs: 375px,
+	phone: 768px,
+	tablet: 992px,
+	desktop: 1200px,
+	desktop_lg: 1400px,
+);
+
+// font settings
+$grid-gutter-width: 15px;
+$container-large-desktop: 1270px;
+
+$font-family-base: $Roboto;
+$font-size-base: 14px;
+$line-height-base: 1.5;
+$font-size-h1: 48px;
+$font-size-h2: 38px;
+$font-size-h3: 28px;
+$font-size-h4: 16px;
+
+$paragraph-spacing: 0 0 15px;
+
+$hover-opacity: 0.8;
+$time-animation: 0.3s;
+
+// colors
+$white: #fff;
+$black: #000;
+$gray: #343434;
+
+//
+$sand: #F5F5F5;
+$gray_cod: #1A1919;
+$orange: #F47116;
+$alto: #CECECE;
+$blackcurrant: #332B3A;
+$scorpion: #5a5a5a;
+//
+
+$alabaster: #BFBFBF;
+$blue: #1C2D72;
+$mercury: #E9E9E9;
+
+
+$base-color: $black;
+$body-bg: $white;
+
+$link-color: $black;
+
+$btn-color: $white;
+$btn-border-radius-base: 0px;
+$btn-font-size: 15px;
+$btn-line-height: 18px;
+$btn-font-weight: 400;
+$btn-min-width: 120px;
