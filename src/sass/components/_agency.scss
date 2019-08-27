@@ -1,0 +1,227 @@
+._left{
+	text-align: left;
+}
+.south{
+	display: block;
+	margin-bottom: 30px;
+	&__box-img{
+		border-top:11px solid $blue;
+		margin-right: 26px;
+		width: 50%;
+	}
+	.img-holder{
+		height: 100%;
+	}
+	&__content{
+		width: 50%;
+		padding-top: 20px;
+	}
+	.h2{
+		margin-bottom: 40px;
+	}
+	.row{
+		margin: 0 0 56px;
+	}
+	&__paragraph{
+		font-size: 17px;
+		line-height: 24px;
+		font-weight: 300;
+		margin-bottom: 24px;
+		&:last-child{
+			margin-bottom: 0px;
+		}
+		&_mb{
+			margin-bottom: 24px;
+		}
+	}
+	figcaption{
+		margin-top: 10px;
+		font-style: italic;
+	}
+	&__pdf-file{
+		display: flex;
+		align-items: flex-end;
+		position: relative;
+		font-size: 17px;
+		line-height: 22px;
+		font-weight: bold;
+		&:after{
+			content: '';
+			display: inline-block;
+			vertical-align: top;
+			height: 1px;
+			flex: 1 0 auto;
+			margin:0 0 4px 35px;
+			background-color: $mercury;
+		}
+		&:before{
+			content: '';
+			display: inline-block;
+			vertical-align: top;
+			background: url(../images/pdf.svg) no-repeat;
+			background-size: 100% auto;
+			width: 51px;
+			height: 58px;
+			margin: 0 6px 4px 0;
+		}
+	}
+}
+.general{
+	.h2{
+		margin-bottom: 40px;
+	}
+	.h5{
+		display: block;
+		font-size: 20px;
+		line-height: 30px;
+		margin-bottom: 30px;
+	}
+	.row{
+		margin: 0 -40px 40px;
+		border-bottom: 1px solid $mercury;
+	}
+	.col{
+		padding: 0 40px;
+		margin-bottom: 25px;
+		ul{
+			display: block;
+			margin-bottom: 25px;
+		}
+		li{
+			padding-left: 20px;
+			position: relative;
+			font-size: 17px;
+			line-height: 22px;
+			&:after{
+				content: '';
+				position: absolute;
+				top: 8px;
+				left: 0;
+				width: 7px;
+				height: 7px;
+				border-radius: 50%;
+				background: $blue;
+			}
+		}
+	}
+	&__list-title{
+		display: block;
+		font-size: 17px;
+		line-height: 22px;
+		margin-bottom: 25px;
+	}
+	&__legenda{
+		.row{
+			margin: 0;
+			align-items: flex-start;
+		}
+	}
+	&__map-block{
+		width: 50%;
+		margin-right: 20px;
+		.img-holder{
+			display: block;
+			width: 100%;
+			padding-bottom: 98%;
+		}
+		figcaption{
+			margin-top: 20px;
+		}
+	}
+	&__map-content{
+		width: 50%;
+	}
+	&__content-list{
+		.box-img{
+			max-width: 70px;
+			width: 100%;
+			margin-right: 35px;
+			display: flex;
+			justify-content: center;
+		}
+		li{
+			display: flex;
+			align-items: center;
+			margin-bottom: 18px;
+		}
+	}
+	.tabs{
+		display: flex;
+	}
+	.tabs-caption{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: 0;
+		line-height: 0;
+		border: 1px solid #BDBDBD;
+		max-width: 400px;
+		width: 100%;
+	}
+	.tabs-caption li{
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		background: #fff;
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: 500;
+		padding: 12px 20px 12px 12px;
+		color: #000;
+		cursor: pointer;
+		border-bottom: 1px solid #BDBDBD;
+		transition: .3s;
+		&:last-child{
+			border-bottom: 0;
+		}
+	}
+	.tabs-caption svg{
+		margin-left: auto;
+		transition: .3s;
+	}
+	.tabs-caption li.active{
+		background: $blue;
+		color: #fff;
+		svg{
+			line{
+				stroke: #fff;
+			}
+		}
+	}
+	.tabs-content{
+		display: none;
+		width: 100%;
+		height: 100%;
+		ul{
+			max-width: 300px;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		li{
+			display: block;
+			margin-bottom: 10px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		.link{
+			display: block;
+			text-align: center;
+			color: #000;
+			background: #fff;
+			font-size: 15px;
+			line-height: 20px;
+			padding: 10px 5px 10px 5px;
+		}
+	}
+	.tabs-content.active{
+		display: block;
+	}
+}
+
+
+
