@@ -2,17 +2,17 @@
 	&__row{
 		display: flex;
 		flex-flow: row wrap;
-		margin: 0 -12px;
+		margin: 0 -10px;
 	}
 	&__col{
-		padding: 0 12px;
+		padding: 0 10px;
 		width: 50%;
 		@include media("<phone"){
 			width: 100%;
 		}
 		&.mb0{
 			@include media("<phone"){
-				padding-bottom: 12px;
+				padding-bottom: 10px;
 			}
 		}
 	}
@@ -20,10 +20,7 @@
 		position: relative;
 		display: block;
 		z-index: 1;
-		margin-bottom: 24px;
-		@include media("<phone"){
-			margin-bottom: 16px;
-		}
+		margin-bottom: 10px;
 		&_valid{
 			.form__control{
 				border-color: #28CD6A !important;
@@ -51,27 +48,27 @@
 			display: flex;
 			flex-flow: row nowrap;
 			justify-content: space-between;
-			align-items: flex-start;
+			align-items: center;
 			@include media("<phone"){
 				justify-content: flex-start;
-				align-items: center;
+				align-items: flex-start;
 				flex-flow: column;
 			}
 			.form-group-check{
 				text-align: left;
-				max-width: 300px;
+				margin-right: 10px;
 				@include media("<phone"){
 					max-width: 90%;
-					margin: 0 auto 24px;
+					margin: 0 0 24px;
 				}
 			}
 		}
 	}
 	&__label{
 		display: block;
-		font-size: 14px;
+		font-size: 16px;
 		line-height: 20px;
-		font-weight: 500;
+		font-weight: 400;
 		color: $gray;
 		text-align: left;
 		padding: 0;
@@ -86,37 +83,37 @@
 	display: inline-block;
 	vertical-align: top;
 	width: 100%;
-	height: 44px;
-	font-size: 12px;
-	line-height: 16px;
+	height: 30px;
+	font-size: 15px;
+	line-height: 20px;
 	font-weight: 400;
-	padding: 10px 16px;
-	color: $gray_cod;
+	padding: 5px 8px;
+	color: $gray;
 	background-color: $white;
 	border: none;
-	border: 1px solid #EEECEC;
+	border: 1px solid rgba($black, 0.35);
 	outline: none;
 	resize: none;
 	margin: 0;
-	border-radius: 3px;
+	border-radius: 0;
 	transition: all .2s;
 	@include media("<phone"){}
 	&::-webkit-input-placeholder {
-		color: $gray;
+		color: $alto;
 		opacity: 1;
 	}
 	&::-ms-input-placeholder {
-		color: $gray;
+		color: $alto;
 		opacity: 1;
 	}
 	&::-moz-placeholder {
-		color: $gray;
+		color: $alto;
 		opacity: 1;
 	}
 	&:focus{
 		outline: none;
 		box-shadow: none;
-		border: 1px solid $gray_cod;
+		border: 1px solid rgba($black, 0.75);
 	}
 	&.type2{
 		color: $gray;
@@ -142,8 +139,9 @@
 	}
 }
 textarea.form__control{
-	height: 144px;
+	height: 90px;
 	resize: none;
+	@include media('<phone'){}
 	&_small{}
 }
 
@@ -152,10 +150,15 @@ textarea.form__control{
 	margin: 0 auto;
 	&__control{
 		width: 100%;
-		margin-bottom: 24px;
-		@include media('<phone'){
-			margin-bottom: 16px;
-		}
+		margin-bottom: 20px;
+	}
+	&__text{
+		display: block;
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 300;
+		color: $gray;
+		margin-bottom: 18px;
 	}
 	&-check{
 		position: relative;
@@ -172,10 +175,10 @@ textarea.form__control{
 				background-repeat: no-repeat;
 				background-position: center;
 				display: inline-block;
-				width: 24px;
-				height: 24px;
-				border: 1px solid $orange;
-				background-color: $orange;
+				width: 16px;
+				height: 16px;
+				border: 1px solid $blue;
+				background-color: $blue;
 			}
 		}
 	}
@@ -186,30 +189,30 @@ textarea.form__control{
 			content:'';
 			-webkit-appearance: none;
 			background-color: #fff;
-			border: 1px solid #EEECEC;
-			height: 24px;
-			width: 24px;
-			min-width: 24px;
-			border-radius: 3px;
+			border: 1px solid #BDBDBD;
+			height: 16px;
+			width: 16px;
+			min-width: 16px;
+			border-radius: 0;
 			display: inline-block;
 			vertical-align: middle;
 			cursor: pointer;
-			margin: 0 12px 0 0;
+			margin: 1px 12px 0 0;
 		}
 		&.enable{
 			opacity: 1;
 		}
 	}
 	&-agree{
-		font-size: 12px;
-		line-height: 24px;
-		font-weight: 400;
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 300;
 		color: $gray;
 		margin-bottom: 0;
 		> a{
-			color: $white;
+			color: $gray;
 			&:hover{
-				color: $orange;
+				color: $blue;
 			}
 		}
 	}

@@ -659,165 +659,78 @@ body>.jcf-select-drop.jcf-drop-flipped {
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .contact{
-	background: url(#{$images}img-contact-bg-01.png) 100% 10% no-repeat;
-	background-size: auto;
-	@include media("<desktop"){
-		background: none;
-	}
-	background: url(#{$images}img-contact-bg-02.png) 0% 50% no-repeat;
-	background-size: auto;
-	@include media("<desktop"){
-		background: none;
-	}
-	&__wrap{
-		margin-bottom: 80px;
+	padding: 45px 0 62px;
+	@include media("<phone"){
+		padding: 30px 0;
 	}
 	.row{
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
-		margin: 0 -15px 30px;
+		margin: 0 -10px;
 		@include media("<phone"){
 			flex-flow: column;
+			margin: 0;
 		}
 		.col{
-			flex: 1 1 22%;
-			padding: 0 15px 30px;
-			@include media("<tablet"){
-				flex: 1 1 50%;
-			}
-		}
-		.h3{
-			margin-bottom: 60px;
+			flex: 1 1 50%;
+			padding: 0 10px;
 			@include media("<phone"){
-				margin-bottom: 30px;
+				flex: 1 1 auto;
+				padding: 15px 0;
 			}
 		}
 	}
-	.footer-links{
-		&__item{
-			margin-bottom: 24px;
-			font-weight: 400;
-			font-size: 18px;
-			line-height: 25px;
-			&:last-child{
-				margin-bottom: 0;
-			}
+	.btn{
+		min-width: 180px;
+		@include media("<phone"){
+			min-width: auto;
+			width: 100%;
 		}
-		&__link{
-			&_contact{
-				padding-left: 44px;
+	}
+	&__info{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 28px;
+		@include media("<phone"){
+			margin-bottom: 2px;
+		}
+		.footer-links__list{
+			column-count: 2;
+			@include media('<desktop'){
+				column-count: 1;
 			}
-			&-ico{
-				width: 20px;
-				min-width: 20px;
-				&.phone{
-					top: 2px;
-					img{
-						width: auto;
-						min-width: 18px;
-						max-width: 18px;
-					}
-				}
-				&.address{
-					top: 3px;
-					img{
-						width: auto;
-						min-width: 14px;
-						max-width: 14px;
-					}
-				}
-				&.email{
-					top: 4px;
-					img{
-						width: auto;
-						min-width: 20px;
-						max-width: 20px;
-					}
-				}
+			.footer-links__item{
+				margin-bottom: 18px;
+				margin-right: 10px;
+			}
+			.footer-links__link{
+				font-size: 16px;
+				line-height: 1.5;
+				color: $gray;
+				font-weight: 700;
+				padding-left: 40px;
+			}
+			a.footer-links__link:hover{
+				color: $blue;
+			}
+			.footer-links__link-ico{
+				width: 26px;
+				min-width: 26px;
 			}
 		}
 	}
-	&__form{
-		margin: 90px 0 0;
-		padding: 60px 0;
-		background: #FBFBFB;
-	}
+	&__form{}
 }
 
 .map{
 	display: block;
 	width: 100%;
-	height: 550px;
+	height: 100%;
+	min-height: 400px;
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -825,6 +738,77 @@ body>.jcf-select-drop.jcf-drop-flipped {
 		height: 300px;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .news{
 	background: url(#{$images}news-bg.png) 0 10% no-repeat;

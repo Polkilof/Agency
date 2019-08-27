@@ -52,7 +52,7 @@ function accordeon(){
 		$(this).parents(".accordeon").find("dd").not(this).slideUp().prev().removeClass("active");
 		$(this).next().not(":visible").slideDown().prev().addClass("active");
 	});
-	/*$(".accordeon dl.current dd").show();*/
+	$(".accordeon dl.current dd").show();
 }
 
 function tabs(){

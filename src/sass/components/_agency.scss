@@ -4,34 +4,63 @@
 .south{
 	display: block;
 	margin-bottom: 30px;
+	.row{
+		@include media('<tablet'){
+			flex-direction: column;
+		}
+	}
 	&__box-img{
 		border-top:11px solid $blue;
 		margin-right: 26px;
 		width: 50%;
+		@include media('<tablet'){
+			margin: 0 auto;
+		}
+		@include media('<phone'){
+			width: 100%;
+		}
 	}
 	.img-holder{
 		height: 100%;
+		@include media('<tablet'){
+			display: block;
+		    width: 100%;
+		    padding-bottom: 110%;
+		}
 	}
 	&__content{
 		width: 50%;
 		padding-top: 20px;
+		@include media('<tablet'){
+			width: 100%;
+		}
 	}
 	.h2{
 		margin-bottom: 40px;
+		@include media('<tablet'){
+			margin-bottom: 20px;
+		}
 	}
 	.row{
 		margin: 0 0 56px;
+		@include media('<tablet'){
+			margin: 0 0 12px;
+		}
 	}
 	&__paragraph{
 		font-size: 17px;
 		line-height: 24px;
 		font-weight: 300;
 		margin-bottom: 24px;
+		
 		&:last-child{
 			margin-bottom: 0px;
 		}
 		&_mb{
 			margin-bottom: 24px;
+			@include media('<tablet'){
+				margin-bottom: 12px;
+			}
 		}
 	}
 	figcaption{
@@ -63,29 +92,49 @@
 			width: 51px;
 			height: 58px;
 			margin: 0 6px 4px 0;
+			@include media('<phone'){
+				width: 41px;
+				height: 48px;
+			}
 		}
 	}
 }
 .general{
 	.h2{
 		margin-bottom: 40px;
+		@include media('<tablet'){
+			margin-bottom: 20px;
+		}
 	}
 	.h5{
 		display: block;
 		font-size: 20px;
 		line-height: 30px;
 		margin-bottom: 30px;
+		@include media('<phone'){
+			margin-bottom: 20px;
+		}
 	}
 	.row{
 		margin: 0 -40px 40px;
 		border-bottom: 1px solid $mercury;
+		@include media('<phone'){
+			margin: 0 0 20px;
+		}
 	}
 	.col{
 		padding: 0 40px;
 		margin-bottom: 25px;
+		@include media('<phone'){
+			margin-bottom: 0px;
+			padding: 0;
+		}
 		ul{
 			display: block;
 			margin-bottom: 25px;
+			@include media('<phone'){
+				margin-bottom: 15px;
+			}
 		}
 		li{
 			padding-left: 20px;
@@ -109,16 +158,32 @@
 		font-size: 17px;
 		line-height: 22px;
 		margin-bottom: 25px;
+		@include media('<phone'){
+			margin-bottom: 15px;
+		}
 	}
 	&__legenda{
+		display: block;
+		margin-bottom: 30px;
 		.row{
 			margin: 0;
 			align-items: flex-start;
+			border: 0;
+			@include media('<tablet'){
+				flex-direction: column;
+			}
 		}
 	}
 	&__map-block{
 		width: 50%;
 		margin-right: 20px;
+		@include media('<tablet'){
+			margin: 0 auto;
+			width: 75%;
+		}
+		@include media('<600px'){
+			width: 100%;
+		}
 		.img-holder{
 			display: block;
 			width: 100%;
@@ -130,6 +195,9 @@
 	}
 	&__map-content{
 		width: 50%;
+		@include media('<tablet'){
+			width: 100%;
+		}
 	}
 	&__content-list{
 		.box-img{
@@ -138,12 +206,19 @@
 			margin-right: 35px;
 			display: flex;
 			justify-content: center;
+			@include media('<phone'){
+				margin-right: 20px;
+			}
 		}
 		li{
 			display: flex;
 			align-items: center;
 			margin-bottom: 18px;
 		}
+	}
+	&__tab{
+		display: block;
+		margin-bottom: 35px;
 	}
 	.tabs{
 		display: flex;
@@ -154,34 +229,44 @@
 		list-style: none;
 		font-size: 0;
 		line-height: 0;
-		border: 1px solid #BDBDBD;
-		max-width: 400px;
-		width: 100%;
+		position: relative;
+		min-height: 400px;
 	}
-	.tabs-caption li{
+	.tabs-caption dt{
 		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		max-width: 400px;
 		width: 100%;
 		background: #fff;
 		font-size: 18px;
-		line-height: 24px;
+		line-height: 25px;
 		font-weight: 500;
 		padding: 12px 20px 12px 12px;
 		color: #000;
 		cursor: pointer;
-		border-bottom: 1px solid #BDBDBD;
+		border-top: 1px solid #BDBDBD;
+		border-right: 1px solid #BDBDBD;
+		border-left: 1px solid #BDBDBD;
+
 		transition: .3s;
+		@include media('<tablet'){
+			max-width: initial;
+		}
+	}
+	dl{
 		&:last-child{
-			border-bottom: 0;
+			dt{
+				border-bottom: 1px solid #BDBDBD;
+			}
 		}
 	}
 	.tabs-caption svg{
 		margin-left: auto;
 		transition: .3s;
 	}
-	.tabs-caption li.active{
+	.tabs-caption dt.active{
 		background: $blue;
 		color: #fff;
 		svg{
@@ -190,20 +275,54 @@
 			}
 		}
 	}
+	dd{
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 400px;
+		bottom: 0;
+		@include media('<tablet'){
+			position: relative;
+			top: auto;
+			left: 0;
+			right: auto;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
 	.tabs-content{
 		display: none;
 		width: 100%;
 		height: 100%;
+		@include media('<tablet'){
+			background: #fff;
+			background-image: none !important;
+		}
+		.content{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+		}
 		ul{
 			max-width: 300px;
 			width: 100%;
 			margin: 0;
 			padding: 0;
 			list-style: none;
+			margin: 0 auto;
+			@include media('<tablet'){
+				max-width: initial;
+
+			}
 		}
 		li{
 			display: block;
 			margin-bottom: 10px;
+			border: 1px solid rgba(0, 0, 0, 0.344);
+			@include media('<tablet'){
+				border: 0;
+			}
 			&:last-child{
 				margin-bottom: 0;
 			}
@@ -216,6 +335,35 @@
 			font-size: 15px;
 			line-height: 20px;
 			padding: 10px 5px 10px 5px;
+			transition: .3s;
+			@include media('<tablet'){
+				text-align: left;
+				padding: 0px 5px 0px 20px;
+				position: relative;
+				color: $blue;
+			}
+			&:after{
+				content: '';
+				position: absolute;
+				top: 6px;
+				left: 3px;
+				width: 7px;
+				height: 7px;
+				border-radius: 50%;
+				background: $blue;
+				opacity: 0;
+				@include media('<tablet'){
+					opacity: 1;
+				}
+			}
+			&:hover{
+				background: $blue;
+				color: #fff;
+				@include media('<tablet'){
+					color: $blue;
+					background: #fff;
+				}
+			}
 		}
 	}
 	.tabs-content.active{
