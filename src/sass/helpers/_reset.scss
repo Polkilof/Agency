@@ -262,17 +262,12 @@ p{margin: $paragraph-spacing;}
 /* styles end */
 .row{
 	display: flex;
-	flex-flow: row nowrap;
-	margin: 0 -15px;
-	@include media("<phone"){
-		flex-flow: column;
-	}
+	flex-flow: row wrap;
+	margin: 0 -10px;
 	.col{
-		padding: 0 15px;
-		flex: 1 1 50%;
+		padding: 0 10px;
 		@include media("<phone"){
-			flex: 1 1 auto;
-			padding: 15px;
+			padding: 10px;
 		}
 	}
 }
