@@ -141,6 +141,7 @@
 			position: relative;
 			font-size: 17px;
 			line-height: 22px;
+			font-weight: 300;
 			&:after{
 				content: '';
 				position: absolute;
@@ -371,5 +372,267 @@
 	}
 }
 
+.invest{
 
+	.row{
+		margin: 0 0 10px;
+	}
+	.img-holder{
+		padding-bottom: 65%;
+	}
+	
 
+}
+
+.data{
+	h2{
+		margin-bottom: 40px;
+	}
+	.h5{
+		margin-bottom:4px;
+	}
+	&__general{
+		display: flex;
+		align-items: flex-start;
+		padding-bottom: 23px;
+		margin-bottom: 40px;
+		border-bottom: 1px solid $mercury;
+	}
+	&__box-img{
+		display: block;
+		margin-right: 80px;
+		max-width: 234px;
+		width: 100%;
+	}
+	&__text{
+	}
+	&__generale-list{
+		li{
+			padding-left: 20px;
+		    position: relative;
+		    font-size: 17px;
+		    line-height: 22px;
+		    font-weight: 300;
+		    &:after{
+		    	content: '';
+			    position: absolute;
+			    top: 8px;
+			    left: 0;
+			    width: 7px;
+			    height: 7px;
+			    border-radius: 50%;
+			    background: #1C2D72;
+		    }
+		}
+	}
+	&__transport{
+		display: block;
+	}
+	&__transport-list{
+		display: block;
+		margin-bottom: 15px;
+		border-bottom: 1px solid $mercury;
+		.transport-content{
+			display: flex;
+			margin-bottom:20px ;
+		}
+		.box-ico{
+			display: block;
+			max-width: 100px;
+			width: 100%;
+			text-align: center;
+			margin-right: 18px;
+		}
+	}
+	&__publice{
+		.box-ico{
+			max-width: 95px;
+		}
+		.list-content{
+			margin-top: 10px;
+		}
+	}
+}
+
+.workforce{
+	display: block;
+	border-bottom: 1px solid $mercury;
+	margin-bottom: 35px;
+	table{
+		display: table;
+		width: 100%;
+		margin-bottom: 26px;
+		thead{
+			tr{
+				th{
+					background:$blue;
+					color: #fff;
+					font-size: 20px;
+					height: 50px;
+					padding: 0 15px;
+					vertical-align: middle;
+					&:nth-child(1){
+						text-align: right;
+					}
+					&:nth-child(2){
+						text-align: left;
+					}
+				}
+			}
+		}
+		tbody{
+			border: 1px solid #DDDDDD;
+			tr{
+				&:nth-child(2n+1){
+					background: $mercury;
+				}
+				td{
+					text-align: center;
+					height: 50px;
+					vertical-align: middle;
+					font-size: 17px;
+					line-height: 21px;
+					font-weight: bold;
+					border-right: 1px solid #DDDDDD;
+				}
+			}
+		}
+	}
+	&__caption{
+		display: block;
+		font-size: 17px;
+		line-height: 21px;
+		font-style: italic;
+		margin-bottom: 35px;
+		font-weight: 300;
+	}
+	.h5{
+		margin-bottom: 40px;
+	}
+	.table-block{
+		th{
+			text-align: left;
+			padding: 0 0 0 35px;
+			&:nth-child(1){
+				text-align: left;
+			}
+		}
+		tbody{
+			td{
+				text-align: left;
+				padding: 0 0 0 35px;
+				font-weight: 300;
+			}
+			th{
+				height: 50px;
+				vertical-align: middle;
+				font-size: 17px;
+				line-height: 21px;
+				font-weight: bold;
+				border-right: 1px solid #DDDDDD;
+			}
+		}
+	}
+}
+
+.economy{
+	.h5{
+		margin-bottom: 20px;
+	}
+	.row{
+		margin-bottom: 35px;
+	}
+	&__list{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li{
+			font-size: 17px;
+			line-height: 21px;
+			b{
+				margin-right: 15px;
+			}
+		}
+	}
+	.box-img{
+		display: block;
+		max-width: 480px;
+		text-align: center;
+		img{
+			display: block;
+			width: 100%;
+		}
+		.workforce__caption{
+			margin-top: 25px;
+		}
+	}
+	&__list{
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -10px 45px;
+	}
+	&__item{
+		width: 33.333%;
+		padding: 0 10px;
+		&:hover{
+			.economy__box-img-mask{
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+	&__box-img{
+		position: relative;
+		display: block;
+		height: 264px;
+		margin-bottom: 20px;
+		&-mask{
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(0deg, rgba(17, 17, 17, 0.67), rgba(17, 17, 17, 0.67));
+			padding: 18px 22px 42px;
+			opacity: 0;
+			visibility: hidden;
+			transition: all .3s ease;
+			.economy__title{
+				color: $white;
+			}
+			.economy__paragraph{
+				color: $white;
+				height: 105px;
+				overflow: hidden;
+			}
+			.btn{
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+		}
+	}
+	&__title{
+		display: block;
+		font-size: 17px;
+		line-height: 21px;
+	}
+	&__paragraph{
+		display: block;
+		font-size: 17px;
+		line-height: 21px;
+		font-weight: 300;
+	}
+	&__date{
+		display: inline-block;
+		vertical-align: top;
+		margin-bottom: 12px;
+		line-height: 26px;
+		font-size: 15px;
+		font-weight: 400;
+		padding: 0 7px;
+		color: $white;
+		border: 1px solid #848484;
+	}
+
+}
