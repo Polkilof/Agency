@@ -5501,7 +5501,6 @@ textarea.form__control {
     right: 0;
     bottom: 0;
     background: -webkit-gradient(linear, left bottom, left top, from(rgba(17, 17, 17, 0.67)), to(rgba(17, 17, 17, 0.67)));
-    background: -webkit-linear-gradient(bottom, rgba(17, 17, 17, 0.67), rgba(17, 17, 17, 0.67));
     background: -o-linear-gradient(bottom, rgba(17, 17, 17, 0.67), rgba(17, 17, 17, 0.67));
     background: linear-gradient(0deg, rgba(17, 17, 17, 0.67), rgba(17, 17, 17, 0.67));
     padding: 18px 22px 42px;
