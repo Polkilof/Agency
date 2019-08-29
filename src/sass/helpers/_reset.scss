@@ -264,6 +264,9 @@ p{margin: $paragraph-spacing;}
 	display: flex;
 	flex-flow: row wrap;
 	margin: 0 -10px;
+	&:before, &:after{
+		display: none !important;
+	}
 	.col{
 		padding: 0 10px;
 		@include media("<phone"){

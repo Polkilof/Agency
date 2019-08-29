@@ -5,6 +5,7 @@
 	display: block;
 	margin-bottom: 30px;
 	.row{
+		flex-flow: row nowrap;
 		@include media('<tablet'){
 			flex-direction: column;
 		}
@@ -168,6 +169,7 @@
 		margin-bottom: 30px;
 		.row{
 			margin: 0;
+			flex-flow: row nowrap;
 			align-items: flex-start;
 			border: 0;
 			@include media('<tablet'){

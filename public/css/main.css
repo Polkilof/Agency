@@ -1704,6 +1704,8 @@ p {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   margin: 0 -10px; }
+  .row:before, .row:after {
+    display: none !important; }
   .row .col {
     padding: 0 10px; }
     @media (max-width: 767px) {
@@ -4953,12 +4955,17 @@ textarea.form__control {
 .south {
   display: block;
   margin-bottom: 30px; }
-  @media (max-width: 991px) {
-    .south .row {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; } }
+  .south .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap; }
+    @media (max-width: 991px) {
+      .south .row {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
   .south__box-img {
     border-top: 11px solid #1C2D72;
     margin-right: 26px;
@@ -5107,6 +5114,10 @@ textarea.form__control {
   margin-bottom: 30px; }
   .general__legenda .row {
     margin: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
