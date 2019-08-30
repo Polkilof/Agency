@@ -785,1080 +785,6 @@ body>.jcf-select-drop.jcf-drop-flipped {
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.news{
-	background: url(#{$images}news-bg.png) 0 10% no-repeat;
-	@include media("<desktop"){
-		background: none;
-	}
-	&_desct{
-		background: url(#{$images}news-desct-bg.png) 0 40% no-repeat;
-		@include media("<desktop"){
-			background: none;
-		}
-	}
-	&__list{
-		margin: 0 -15px;
-		padding: 0;
-		list-style: none;
-		display: flex;
-		flex-wrap: wrap;
-		@include media("<phone"){
-			margin: 0 -10px;
-		}
-	}
-	&__item{
-		width: 33.333%;
-		padding: 0 15px;
-		margin-bottom: 40px;
-		@include media("<tablet"){
-			width: 50%;
-		}
-		@include media("<phone"){
-			width: 100%;
-			padding: 0;
-		}
-	}
-	&__box-img{
-		display: block;
-		position: relative;
-		width: 100%;
-		padding-bottom: 88%;
-		margin-bottom: 24px;
-		overflow: hidden;
-	}
-	&__img{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		min-width: 100%;
-		min-height: 100%;
-	}
-	&__content{
-		padding: 0 30px;
-		flex: 1 1 auto;
-		justify-content: space-between;
-		display: flex;
-		flex-direction: column;
-		@include media("<tablet"){
-			padding: 0 10px;
-		}
-	}
-	&__list-title{
-		display: block;
-		font-size: 18px;
-		line-height: 25px;
-		font-weight: 700;
-		text-align: left;
-		margin:0 0 24px;
-	}
-	&__paragraph{
-		font-size: 14px;
-		line-height: 23px;
-		margin-bottom: 30px;
-		flex: 0 1 100%;
-		@include media("<phone"){
-			font-size: 14px;
-			line-height: 22px;
-			margin-bottom: 20px;
-		}
-		&-desct{
-			font-size: 18px;
-			line-height: 32px;
-			@include media("<phone"){
-				font-size: 14px;
-				line-height: 25px;
-				margin-bottom: 15px;
-			}
-		}
-	}
-	&__more{
-		display: block;
-		font-size: 12px;
-		line-height: 20px;
-		font-weight: 700;
-		margin-bottom: 30px;
-		transition: all .3s;
-	}
-	&__list-link{
-		display: flex;
-		flex-direction: column;
-		transition: all .3s;
-		height: 100%;
-		&:hover{
-			background: $white;
-			box-shadow: 0px 0px 40px rgba(94, 93, 93, 0.1);
-			.news__more{
-				color: $orange;
-				text-decoration: underline;
-			}
-		}
-	}
-	&__img-block{
-		display: block;
-		margin-bottom: 60px;
-		@include media("<phone"){
-			margin: 0 -10px 30px;
-		}
-	}
-	&__images{
-		display: block;
-		max-width: 100%;
-		max-height: 100%;
-		margin: 0 auto;
-	}
-	&__text-desct-block{
-		display: block;
-		margin-bottom: 50px;
-	}
-}
-
-.datasheets{
-	background: url(#{$images}datasheets-bg.png) 100% 40% no-repeat;
-	@include media("<desktop"){
-		background: none;
-	}
-	&__list{
-		margin: 0 0 30px;
-		padding: 0;
-		list-style: none;
-	}
-	&__item{
-		border: 1px solid $mercury;
-		border-top:0;
-		padding: 20px 10px;
-		&:first-child{
-			border-top: 1px solid $mercury;
-		}
-	}
-	&__content{
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		@include media("<phone"){
-			flex-direction: column;
-		}
-	}
-	&__descr{
-		font-size: 18px;
-		line-height: 25px;
-		letter-spacing: 0.05px;
-		font-weight: 700;
-		@include media("<phone"){
-			margin-bottom: 16px;
-		}
-	}
-	&__link{
-		display: inline-block;
-		vertical-align: top;
-		margin-left: 15px;
-		min-width: 90px;
-		text-align: center;
-		padding: 6px 3px;
-		border: 1px solid $orange;
-		color: $orange;
-		border-radius: 5px;
-		font-size: 12px;
-		line-height: 16px;
-		font-weight: 700;
-		transition: all .3s;
-		&:hover{
-			transform: translate(2px, -2px);
-			box-shadow: -4px 5px 8px 1px rgba(169, 169, 169, 0.75);
-			color: $orange;
-		}
-		&_orange{
-			background: $orange;
-			color: $white;
-			&:hover{
-				color: $white;
-			}
-		}
-	}
-}
-.faq{
-	background: url(#{$images}faq-bg.png) 100% 30% no-repeat;
-	@include media("<desktop"){
-		background: none;
-	}
-	.accordeon{
-		dl{
-			margin: 0;
-			background-color: $white;
-		}
-		dl + dl{
-			margin-top: 30px;
-			@include media("<phone"){
-				margin-top: 16px;
-			}
-		}
-		dt{
-			position: relative;
-			border: 1px solid #e5e5e5;
-			padding: 16px 55px 16px 24px;
-			margin: 0;
-			cursor: pointer;
-			@include media("<phone"){
-				padding: 7px 55px 7px 14px;
-			}
-		}
-		dt:after{
-			content: "";
-			position: absolute;
-			top: 50%;
-			right: 18px;
-			transform: translate(0, -50%) rotate(0.01deg);
-			width: 14px;
-			height: 8px;
-			background: url(#{$images}ico-accordeon-arrow-down.svg) no-repeat;
-			background-size: 100% auto;
-			transition: all 0.5s;
-			@include media("<phone"){
-				right: 14px;
-			}
-		}
-		dt.active:after{
-			transform: translate(0, -50%) rotate3d(1, 0, 0, 180deg);
-		}
-		dt span{
-			display: inline-block;
-			vertical-align: middle;
-			font-size: 14px;
-			line-height: 32px;
-			font-weight: 400;
-			text-transform: uppercase;
-		}
-		dt .ico{
-			display: inline-block;
-			vertical-align: middle;
-			font-size: 0;
-			line-height: 0;
-			text-align: center;
-			width: 32px;
-			height: 32px;
-			margin: 0 8px 0 0;
-		}
-		dt strong{
-			font-weight: 400;
-		}
-		dd{
-			position: relative;
-			margin: -1px 0 0;
-			border: 1px solid #e5e5e5;
-			padding: 24px 24px;
-			font-size: 14px;
-			line-height: 25px;
-			color: $blackcurrant;
-			font-weight: 300;
-			font-style: normal;
-			@include media("<phone"){
-				font-size: 12px;
-				line-height: 20px;
-				padding: 24px 14px;
-			}
-		}
-		dd p{
-			margin: 0 0 30px;
-			@include media("<phone"){
-				margin: 0 0 16px;
-			}
-		}
-		dd p:last-child{
-			margin: 0;
-		}
-		dd .content{}
-	}
-}
-.products{
-	.tabs-caption{
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		font-size: 0;
-		line-height: 0;
-		text-align: center;
-	}
-	.tabs-caption li{
-		position: relative;
-		display: inline-block;
-		vertical-align: top;
-		min-width: 90px;
-		font-size: 12px;
-		line-height: 16px;
-		font-weight: 700;
-		padding: 6px 8px;
-		border: 1px solid $orange;
-		color: $orange;
-		text-align: center;
-		cursor: pointer;
-		margin-right: 30px;
-		border-radius: 5px;
-		&:last-child{
-			margin-right: -0px;
-		}
-		@include media("<phone"){
-			margin-right: 10px;
-		}
-	}
-	.tabs-caption li.active{
-		background: $orange;
-		color: $white;
-	}
-	.tabs-caption li.active:before{
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		height: 1px;
-		background: transparent;
-	}
-	.tabs-content{
-		display: none;
-		min-height: 100px;
-		background: transparent;
-	}
-	.tabs-content.active{
-		display: block;
-		background: transparent;
-	}
-}
-.products{
-	background: url(#{$images}product-bg.png) 0 120px no-repeat;
-	@include media("<desktop"){
-		background: none;
-	}
-	&__list{
-		margin: 0 -25px;
-		padding: 0;
-		list-style: none;
-		display: flex;
-		flex-wrap: wrap;
-		padding-top: 60px;
-	}
-	&__item{
-		width: 25%;
-		padding: 0 25px;
-		margin-bottom: 30px;
-		@include media("<tablet"){
-			width: 50%;
-		}
-		@include media("<phone"){
-			width: 100%;
-		}
-	}
-	&__content{
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
-	&__title{
-		display: block;
-		font-size: 18px;
-		line-height: 25px;
-		margin-bottom: 16px;
-	}
-	&__series{
-		display: block;
-		font-size: 14px;
-		line-height: 19px;
-		margin-bottom: 12px;
-	}
-	&__link{
-		position: relative;
-		display: inline-block;
-		vertical-align: top;
-		&:before{
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 1px;
-			background-color: $gray;
-			transition: width .3s ease-in-out;
-		}
-		&:hover{
-			&:before{
-				width: 0;
-			}
-		}
-	}
-}
-.about{
-	background: url(#{$images}about-bg.png) 100% 20% no-repeat;
-	@include media("<desktop"){
-		background: none;
-	}
-	&__paragraph{
-		display: block;
-		font-size: 18px;
-		line-height: 32px;
-		text-align: center;
-		max-width: 790px;
-		margin:0 auto;
-		margin-bottom: 85px;
-		@include media("<phone"){
-			font-size: 14px;
-			line-height: 21px;
-			bottom: 60px;
-		}
-	}
-	&__map-img-block{
-		display: block;
-		padding-top: 50%;
-		@include media("<phone"){
-			padding-top: 68%;
-		}
-	}
-}
-.facts{
-	background: $alabaster;
-	padding: 90px 0;
-	margin-bottom: 81px;
-	@include media("<phone"){
-		padding: 60px 0;
-	}
-	&__title{
-		margin: 0 0 49px;
-	}
-	&__list{
-		margin: 0 -25px;
-		padding: 0;
-		list-style: none;
-		display: flex;
-		flex-wrap: wrap;
-		@include media("<phone"){
-			margin: 0;
-		}
-	}
-	&__item{
-		width: 25%;
-		padding: 0 15px;
-		display: flex;
-		justify-content: center;
-		@include media("<phone"){
-			width: 100%;
-			padding: 0;
-			margin-bottom: 40px;
-			&:last-child{
-				margin-bottom: 0;
-			}
-		}
-	}
-	&__content{
-		padding-top: 80px;
-		position: relative;
-		font-size: 18px;
-		line-height: 25px;
-		font-weight: 700;
-		&:after{
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 50%;
-			transform: translate(-50%, 0);
-			background: url(#{$images}facts-ico.svg) no-repeat;
-			background-size: 100% auto;
-			width: 60px;
-			height: 60px;
-		}
-	}
-}
-.services{
-	background: url(#{$images}service-bg.png) 0 10% no-repeat;
-	@include media("<desktop"){
-		background: none;
-	}
-	&__list{
-		margin: 0 -15px;
-		padding: 0;
-		list-style: none;
-		display: flex;
-		flex-wrap: wrap;
-		align-items: flex-start;
-		@include media("<phone"){
-			margin: 0 -10px;
-		}
-	}
-	&__item{
-		width: 33.333%;
-		padding: 0 15px;
-		@include media("<tablet"){
-			width: 50%;
-		}
-		@include media("<phone"){
-			width: 100%;
-			padding: 0;
-		}
-	}
-	&__content{
-		display: flex;
-		flex-direction: column;
-		 transition: all .3s;
-		&:hover{
-			background: $white;
-			box-shadow: 0px 0px 40px rgba(94, 93, 93, 0.1);
-		}
-	}
-	&__img-box{
-		display: block;
-		position: relative;
-		width: 100%;
-		padding-bottom: 88%;
-		margin-bottom: 24px;
-		@include media("<phone"){
-			
-		}
-	}
-	&__img{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 100%;
-		height: 100%;
-	}
-	&__text{
-		padding: 0 30px 40px;
-		@include media("<phone"){
-			padding: 0 15px 40px;
-		}
-	}
-	&__title{
-		display: block;
-		font-size: 18px;
-		line-height: 25px;
-		font-weight: 700;
-		text-align: center;
-		margin-bottom: 25px;
-	}
-	&__paragraph{
-		font-size: 14px;
-		line-height: 23px;
-		text-align: center;
-	}
-}
-.title{
-	background: url(#{$images}title-bg.png) 0 60% no-repeat;
-	@include media("<desktop"){
-		background: none;
-	}
-	&__box-img{
-		display: block;
-		margin-bottom:50px;
-		@include media("<phone"){
-			margin-bottom: 36px;
-		}
-	}
-	&__images{
-		display: block;
-		max-width: 100%;
-		max-height: 100%;
-		margin: 0 auto;
-	}
-}
-.filter{
-	&__list{
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		max-width: 255px;
-		margin-right: 30px;
-		@include media("<tablet"){
-			margin-right: 15px;
-			max-width: 220px;
-		}
-		@include media("<phone"){
-			max-width: 300px;
-			margin-bottom: 40px;
-		}
-	}
-	&__item{
-		display: inline-block;
-		vertical-align: top;
-		min-width: 255px;
-		+ .filter__item{
-			margin-top: -1px;
-		}
-		@include media("<tablet"){
-			min-width: 170px;
-		}
-		@include media("<phone"){
-			min-width: 100%;
-		}
-	}
-	&__link{
-		display: block;
-		padding: 27px 5px;
-		text-align: center;
-		border: 1px solid $mercury;
-		background: $white;
-		transition: all .3s;
-		&:hover{
-			background: $orange;
-			border-color: $orange;
-			.filter__descr{
-				color: $white;
-			}
-		}
-	}
-	&__descr{
-		font-size: 18px;
-		line-height: 25px;
-		font-weight: 700;
-		color: $scorpion;
-		transition: all .3s;
-	}
-}
-.components{
-	background: url(#{$images}components-bg.png) 0 60% no-repeat;
-	@include media("<desktop"){
-		background: none;
-	}
-	&__flex-container{
-		display: flex;
-		align-items: flex-start;
-		@include media("<phone"){
-			flex-direction: column;
-			align-items: center;
-		}
-	}
-	&__items{
-		width: 100%;
-	}
-	&__list{
-		margin: 0 -15px;
-		padding: 0;
-		list-style: none;
-		display: flex;
-		flex-wrap: wrap;
-	}
-	&__item{
-		width: 33.333%;
-		padding: 0 15px;
-		margin-bottom: 30px;
-		@include media("<phone"){
-			width: 50%;
-		}
-		@include media("<550px"){
-			width: 100%;
-		}
-	}
-	&__link{
-		display: none;
-		flex-direction: column;
-		 transition: all .3s;
-		&:hover{
-			background: $white;
-			box-shadow: 0px 0px 30px rgba(94, 93, 93, 0.3);
-		}
-		&:first-child{
-			display: flex;
-		}
-	}
-	&__box-img{
-		display: block;
-		position: relative;
-		width: 100%;
-		padding-bottom: 100%;
-		overflow: hidden;
-	}
-	&__img{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		min-width: 100%;
-		min-height: 100%;
-	}
-	&__descr{
-		background: $white;
-		display: block;
-		text-align: center;
-		padding: 20px;
-		font-size: 18px;
-		line-height: 25px;
-		font-weight: 700;
-	}
-}
-.catalogue{
-	background: url(#{$images}catalog-bg.png) 0 200px no-repeat;
-	@include media("<desktop"){
-		background: none;
-	}
-	&__list{
-		margin: 0 -15px;
-		padding: 0;
-		list-style: none;
-		display: flex;
-		flex-wrap: wrap;
-		@include media("<550px"){
-			margin: 0;
-		}
-	}
-	&__item{
-		width: 25%;
-		padding: 0 15px;
-		@include media("<phone"){
-			width: 50%;
-		}
-		@include media("<550px"){
-			width: 100%;
-			padding: 0 0 15px;
-		}
-	}
-	&__link{
-		display: block;
-		&:hover{
-			background: $white;
-			box-shadow: 0px 0px 30px rgba(94, 93, 93, 0.3);
-		}
-	}
-	&__box-img{
-		display: block;
-		position: relative;
-		width: 100%;
-		padding-bottom: 86%;
-	}
-	&__img{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 100%;
-		height: 100%;
-	}
-	&__descr{
-		display: block;
-		font-size: 18px;
-		line-height: 25px;
-		font-weight: 700;
-		text-align: center;
-		padding: 15px 5px;
-	}
-}
-.result{
-	.search{
-		display: block;
-		margin-bottom: 80px;
-		@include media("<phone"){
-			margin-bottom: 40px;
-		}
-		.form_line{
-			max-width: 444px;
-			margin: 0 0 0 auto !important;
-			@include media("<phone"){
-				max-width: 100%;
-			}
-			.form__control{
-				border: 1px solid $mercury;
-				border-right: 0;
-				&:focus{
-					border-right: 0;
-					border-color: $orange;
-				}
-			}
-		}
-	}
-	.search a{
-		position: relative;
-		display: inline-block;
-		vertical-align: top;
-		width: 100%;
-		height: 100%;
-		z-index: 2;
-	}
-	.search .ico{
-		position: relative;
-		display: inline-block;
-		vertical-align: middle;
-		padding: 13px;
-	}
-	.search.open .ico{
-		display: none;
-	}
-	.search .ico img{
-		display: block;
-		max-width: 100%;
-	}
-	.search.type2{
-		display: block;
-		margin: 0 0 10px;
-		width: auto;
-		height: auto;
-	}
-	.search a{
-		display: none;
-	}
-	.accordeon{
-		border-bottom: 1px solid #e5e5e5;
-		.title{
-			font-size: 18px;
-			line-height: 25px;
-			background: none;
-			@include media("<phone"){
-				font-size: 12px;
-				line-height: 16px;
-			}
-		}
-		.box-link{
-			display: flex;
-		}
-		.download{
-			display: block;
-			max-width: 20px;
-			max-height: 25px;
-			@include media("<phone"){
-				max-width: 9px;
-				max-height: 12px;
-			}
-			svg{
-				display: block;
-				fill: #cecece;
-				transition: all .3s;
-				@include media("<phone"){
-					max-width: 9px;
-					max-height: 12px;
-					margin: 2px 0 0;
-				}
-			}
-			&:hover{
-				svg{
-					fill: $orange;
-				}
-			}
-		}
-		.descr{
-			display: flex;
-			align-items: center;
-		}
-		.link-info{
-			display: none;
-			@include media("<phone"){
-				display: block;
-				margin-left: 10px;
-			}
-		}
-		.info{
-			display: block;
-			background: url(#{$images}info.svg) 50% 50% no-repeat;
-			background-size: 100% auto;
-			width: 12px;
-			height: 12px;
-		}
-		.details{
-			font-size: 14px;
-			line-height: 19px;
-			font-weight: 700;
-			text-decoration: underline;
-			margin-left: 90px;
-			transition: all .3s;
-			@include media("<phone"){
-				margin-left: 20px;
-				font-size: 10px;
-				line-height: 14px;
-			}
-		}
-		dl{
-			margin: 0;
-			background-color: $white;
-		}
-		dt{
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			position: relative;
-			border: 1px solid #e5e5e5;
-			padding: 23px 65px 23px 24px;
-			margin: 0;
-			cursor: pointer;
-			border-bottom: 0;
-			@include media("<phone"){
-				padding: 9px 16px;
-			}
-		}
-		dt.active{
-			.details{
-				color: $orange;
-			}
-		}
-		dt span{
-			display: inline-block;
-			vertical-align: middle;
-			font-size: 14px;
-			line-height: 32px;
-			font-weight: 400;
-			text-transform: uppercase;
-		}
-		dt .ico{
-			display: inline-block;
-			vertical-align: middle;
-			font-size: 0;
-			line-height: 0;
-			text-align: center;
-			width: 32px;
-			height: 32px;
-			margin: 0 8px 0 0;
-		}
-		dd{
-			position: relative;
-			margin: -1px 0 0;
-			border: 1px solid #e5e5e5;
-			border-top: 0;
-			border-bottom: 0;
-			padding: 10px 65px 40px;
-			font-size: 14px;
-			line-height: 25px;
-			color: $blackcurrant;
-			font-weight: 300;
-			font-style: normal;
-			@include media("<phone"){
-				padding: 10px 30px;
-			}
-		}
-		dd p{
-			margin: 0 0 30px;
-		}
-		dd p:last-child{
-			margin: 0;
-		}
-		dd .content{
-			&__list{
-				margin: 0 0 40px;
-				padding: 0;
-				list-style: none;
-				column-count: 2;
-				@include media("<phone"){
-					column-count: 1;
-					margin: 0 0 20px;
-				}
-			}
-			&__item{
-				display: flex;
-				justify-content: space-between;
-				align-items: flex-start;
-				margin-bottom: 15px;
-			}
-			&__descr{
-				font-size: 18px;
-				line-height: 25px;
-				color: $scorpion;
-				@include media("<phone"){
-					font-size: 10px;
-					line-height: 14px;
-				}
-			}
-			&__sense{
-				min-width: 70px;
-				text-align: right;
-				color: $scorpion;
-				font-size: 18px;
-				line-height: 25px;
-				font-weight: 600;
-				@include media("<phone"){
-					font-size: 10px;
-					line-height: 14px;
-				}
-			}
-			&__paragraph{
-				max-width: 320px;
-				font-size: 10px;
-				line-height: 17px;
-				@include media("<phone"){
-					line-height: 14px;
-					margin-bottom: 15px;
-					max-width: 100%;
-				}
-			}
-			.close{
-				display: none;
-				background: url(#{$images}close.svg) 50% 35% no-repeat;
-				background-size: 30px auto;
-				padding: 25px 0;
-				@include media("<phone"){
-					display: block;
-					background-size: 20px auto;
-					padding: 15px 0;
-				}
-			}
-		}
-	}
-}
-
-
-
 .investment{
 	padding: 50px 0 60px;
 	@include media("<phone"){
@@ -2070,3 +996,522 @@ body>.jcf-select-drop.jcf-drop-flipped {
 		color: $gray;
 	}
 }
+
+.flex__container{
+	display: flex;
+	flex-flow: row wrap;
+	margin: 0 -10px 44px;
+	@include media("<tablet"){
+		margin: 0 -25px 10px;
+	}
+}
+.flex__column{
+	width: 50%;
+	padding: 0 10px;
+	overflow: hidden;
+	@include media("<tablet"){
+		width: 100%;
+	}
+	&_pt{
+		@include media("<tablet"){
+			padding-top: 30px;
+		}
+	}
+}
+
+.info{
+	&__item{
+		display: block;
+	}
+	&__description{
+		background-color: $white;
+	}
+	&__img{
+		display: block;
+		width: 100%;
+	}
+	&__holder{
+		padding: 37px 50px 58px;
+		@include media("<phone"){
+			padding: 20px;
+		}
+	}
+	&__title{
+		display: block;
+		text-align: center;
+		font-weight: normal;
+		font-size: 24px;
+		line-height: 28px;
+		margin: 0 0 24px;
+		@include media("<phone"){
+			font-size: 18px;
+			line-height: 22px;
+			margin: 0 0 16px;
+		}
+	}
+	&__text{
+		display: block;
+		font-size: 15px;
+		line-height: 21px;
+		text-align: left;
+		letter-spacing: 0.2px;
+		margin: 0 0 36px;
+		@include media("<phone"){
+			text-align: center;
+			font-size: 12px;
+			line-height: 16px;
+		}
+	}
+	&__buttons{
+		display: flex;
+		justify-content: space-between;
+		flex-flow: row nowrap;
+		font-size: 0;
+		line-height: 0;
+		margin: 22px -10px 0;
+		@include media("<phone"){
+			flex-flow: column;
+			margin: 15px 0 0;
+		}
+		.btn{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-width: auto;
+			width: 100%;
+			margin: 0 10px;
+			@include media("<phone"){
+				margin: 0;
+			}
+			+ .btn{
+				@include media("<phone"){
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+	&-nav{
+		position: relative;
+		overflow: hidden;
+		margin: 7px 0 0;
+		outline: none;
+		overflow: hidden;
+		@include media("<tablet"){
+			margin: 15px -25px 0;
+		}
+		&_mt{
+			margin-top: 61px;
+			@include media("<tablet"){
+				margin-top: 0;
+			}
+		}
+		.slick-list{
+			margin: 0 -7px;
+		}
+	}
+	&-nav__item{
+		float: left;
+		width: 25%;
+		padding: 7px;
+		@include media("<tablet"){
+			padding: 3px;
+		}
+		&.js_active,
+		&.slick-current{
+			.info-nav__link{
+				&:before{
+					background: rgba($black, .15);
+				}
+				.info-nav__txt{
+					color: $black;
+				}
+			}
+		}
+	}
+	&__item-fancybox{
+		position: relative;
+		display: block;
+		height: 448px;
+		@include media("<phone"){
+			height: 185px;
+		}
+		&:before{
+			content: "";
+			position: absolute;
+			top: -1px;
+			left: -1px;
+			right: -1px;
+			height: 3px;
+			background: #1C2D72;
+			z-index: 10;
+		}
+		&:after{
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(#{$images}ico-zoom.svg) 50% 50% no-repeat;
+			background-size: 56px auto;
+			opacity: 0;
+			transition: all .3s ease-in-out;
+		}
+		&:hover{
+			&:after{
+				opacity: 1;
+			}
+		}
+	}
+	&-nav__link{
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: column;
+		background-color: $white;
+		outline: none;
+		&:before{
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba($black, 0);
+			z-index: 0;
+			transition: background .3s;
+		}
+		&:hover{
+			&:before{
+				background: rgba($black, .15);
+			}
+			.info-nav__txt{
+				color: $black;
+			}
+		}
+		&_height{
+			height: 166px;
+			@include media("<phone"){
+				height: 106px;
+			}
+		}
+		&_hxl{
+			height: 100px;
+		}
+		&_height_sm{
+			height: 77px;
+			@include media("<phone"){
+				height: 50px;
+			}
+		}
+		&.mb10{
+			margin-bottom: 10px;
+			@include media("<phone"){
+				margin-bottom: 6px;
+			}
+		}
+	}
+	&-nav__txt{
+		position: relative;
+		display: block;
+		text-align: center;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 22px;
+		color: $white;
+		transition: color .3s;
+		@include media("<phone"){
+			font-size: 12px;
+			line-height: 18px;
+		}
+	}
+}
+
+.slick-prev,
+.slick-next{
+	position: absolute;
+	top: 50%;
+	display: block;
+	width: 35px;
+	height: 35px;
+	border-radius: 0;
+	padding: 0;
+	transform: translate(0, -50%);
+	cursor: pointer;
+	color: transparent;
+	border: none;
+	outline: none;
+	background: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	opacity: 1;
+	transition: opacity .3s ease-in-out;
+	z-index: 20;
+	&:hover{
+		opacity: 1;
+	}
+}
+.slick-prev{
+	background: url(#{$images}ico-arrow-prev.svg) 0 50% no-repeat;
+	background-size: auto;
+	left: 0;
+}
+.slick-next{
+	background: url(#{$images}ico-arrow-next.svg) 100% 50% no-repeat;
+	background-size: auto;
+	right: 0;
+}
+
+.js_slide-nav,
+.restaurant-list{
+	.slick-prev,
+	.slick-next{
+		position: absolute;
+		top: 7px;
+		bottom: 7px;
+		display: block;
+		width: 65px;
+		height: auto;
+		border-radius: 0;
+		padding: 0;
+		transform: translate(0, 0);
+		cursor: pointer;
+		color: transparent;
+		border: none;
+		outline: none;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		opacity: 1;
+		transition: opacity .3s ease-in-out;
+		z-index: 20;
+		@include media("<phone"){
+			width: 45px;
+			height: auto;
+		}
+		&:hover{
+			opacity: 1;
+		}
+	}
+	.slick-prev{
+		background: linear-gradient(90deg, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0) 100%);
+		left: 0;
+		@include media("<phone"){
+			left: 0;
+		}
+		&:after{
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 10px;
+			width: 35px;
+			height: 35px;
+			transform: translate(0, -50%);
+			background: url(#{$images}ico-arrow-prev.svg) 0 50% no-repeat;
+			background-size: 35px auto;
+			@include media("<phone"){}
+		}
+	}
+	.slick-next{
+		background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.42) 100%);
+		right: 0;
+		@include media("<phone"){
+			right: 0;
+		}
+		&:after{
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			width: 35px;
+			height: 35px;
+			transform: translate(0, -50%);
+			background: url(#{$images}ico-arrow-next.svg) 100% 50% no-repeat;
+			background-size: 35px auto;
+			@include media("<phone"){}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.faq{
+	background: url(#{$images}faq-bg.png) 100% 30% no-repeat;
+	@include media("<desktop"){
+		background: none;
+	}
+	.accordeon{
+		dl{
+			margin: 0;
+			background-color: $white;
+		}
+		dl + dl{
+			margin-top: 30px;
+			@include media("<phone"){
+				margin-top: 16px;
+			}
+		}
+		dt{
+			position: relative;
+			border: 1px solid #e5e5e5;
+			padding: 16px 55px 16px 24px;
+			margin: 0;
+			cursor: pointer;
+			@include media("<phone"){
+				padding: 7px 55px 7px 14px;
+			}
+		}
+		dt:after{
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 18px;
+			transform: translate(0, -50%) rotate(0.01deg);
+			width: 14px;
+			height: 8px;
+			background: url(#{$images}ico-accordeon-arrow-down.svg) no-repeat;
+			background-size: 100% auto;
+			transition: all 0.5s;
+			@include media("<phone"){
+				right: 14px;
+			}
+		}
+		dt.active:after{
+			transform: translate(0, -50%) rotate3d(1, 0, 0, 180deg);
+		}
+		dt span{
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 14px;
+			line-height: 32px;
+			font-weight: 400;
+			text-transform: uppercase;
+		}
+		dt .ico{
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 0;
+			line-height: 0;
+			text-align: center;
+			width: 32px;
+			height: 32px;
+			margin: 0 8px 0 0;
+		}
+		dt strong{
+			font-weight: 400;
+		}
+		dd{
+			position: relative;
+			margin: -1px 0 0;
+			border: 1px solid #e5e5e5;
+			padding: 24px 24px;
+			font-size: 14px;
+			line-height: 25px;
+			color: $blackcurrant;
+			font-weight: 300;
+			font-style: normal;
+			@include media("<phone"){
+				font-size: 12px;
+				line-height: 20px;
+				padding: 24px 14px;
+			}
+		}
+		dd p{
+			margin: 0 0 30px;
+			@include media("<phone"){
+				margin: 0 0 16px;
+			}
+		}
+		dd p:last-child{
+			margin: 0;
+		}
+		dd .content{}
+	}
+}
+
+.title{
+	background: url(#{$images}title-bg.png) 0 60% no-repeat;
+	@include media("<desktop"){
+		background: none;
+	}
+	&__box-img{
+		display: block;
+		margin-bottom:50px;
+		@include media("<phone"){
+			margin-bottom: 36px;
+		}
+	}
+	&__images{
+		display: block;
+		max-width: 100%;
+		max-height: 100%;
+		margin: 0 auto;
+	}
+}
+
+
+
+
