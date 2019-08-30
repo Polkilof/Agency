@@ -269,8 +269,10 @@ p{margin: $paragraph-spacing;}
 	}
 	.col{
 		padding: 0 10px;
+		width: 50%;
 		@include media("<phone"){
 			padding: 10px;
+			width: 100%;
 		}
 	}
 }
