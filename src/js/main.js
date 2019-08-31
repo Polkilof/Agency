@@ -60,8 +60,10 @@ function mobileMenu(){
 
 function accordeon(){
 	$(".accordeon dd").hide().prev().click(function() {
-		$(this).parents(".accordeon").find("dd").not(this).slideUp().prev().removeClass("active");
-		$(this).next().not(":visible").slideDown().prev().addClass("active");
+		$(".accordeon dl.current").removeClass("current");
+		$(this).parents(".accordeon").find("dd").not(this).slideUp().prev().removeClass("active").parents("dl").removeClass("active");
+		$(this).next().not(":visible").slideDown().prev().addClass("active").parents("dl").addClass("active");
+
 	});
 	$(".accordeon dl.current dd").show();
 }
@@ -120,6 +122,20 @@ function initSlider(){
 		autoplaySpeed: 5000,
 		variableWidth: true,
 		centerMode: true,
+		swipeToSlide: true
+	});
+
+	var sliderPartners = $('.news__slider');
+	sliderPartners.slick({
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		arrows: false,
+		dots: false,
+		infinite: false,
+		autoplay: false,
+		autoplaySpeed: 5000,
+		variableWidth: true,
+		centerMode: false,
 		swipeToSlide: true
 	});
 

@@ -167,6 +167,7 @@ table{border-collapse: collapse;}
 		display: block !important;
 	}
 }
+
 .hidden{
 	display: none !important;
 }
@@ -211,9 +212,6 @@ h2, .h2{
 	color: $gray;
 	text-align: center;
 	margin: 0 0 60px;
-	&._left{
-		text-align: left;
-	}
 	@include media("<desktop"){}
 	@include media("<tablet"){}
 	@include media("<phone"){
