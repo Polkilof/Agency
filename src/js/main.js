@@ -367,6 +367,26 @@ function slideForOurNav(){
 		centerMode: false,
 		centerPadding: '25px',
 		focusOnSelect: true,
-		swipeToSlide: true
+		swipeToSlide: true,
+		responsive: [
+			{
+				breakpoint: 769,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					centerMode: true,
+					centerPadding: '15%',
+				}
+			},
+			{
+				breakpoint: 450,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					centerMode: true,
+					centerPadding: '30%',
+				}
+			},
+		]
 	});
 }

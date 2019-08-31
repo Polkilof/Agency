@@ -24,6 +24,7 @@ body{
 	color: $base-color;
 	font-size: $font-size-base;
 	line-height: $line-height-base;
+	font-weight: 300;
 	@include media("<phone"){
 		font-size: 14px;
 	}
@@ -78,7 +79,7 @@ a:focus{
 	text-decoration: none;
 }
 a:hover{
-	color: $link-color;
+	color: $blue;
 	text-decoration: none;
 }
 *::-webkit-input-placeholder{
@@ -228,7 +229,7 @@ h3, .h3{
 	font-weight: 700;
 	color: $gray;
 	text-align: left;
-	margin: 0 0 0;
+	margin: 0 0 12px;
 	@include media("<desktop"){}
 	@include media("<tablet"){}
 	@include media("<phone"){
@@ -236,6 +237,10 @@ h3, .h3{
 	}
 	&._center{
 		text-align: center;
+	}
+	small{
+		font-size: 80%;
+		font-weight: 400;
 	}
 }
 h4, .h4{
