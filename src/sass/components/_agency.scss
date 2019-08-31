@@ -710,6 +710,7 @@
 			opacity: 0;
 			visibility: hidden;
 			transition: all .3s ease;
+			text-align: left;
 			.economy__title{
 				color: $white;
 			}
@@ -824,4 +825,285 @@
 			margin-right: 10px;
 		}
 	}
+}
+
+.faq{
+	background: url(#{$images}faq-bg.png) 0 0 no-repeat;
+	padding: 54px 0 35px;
+	@include media("<tablet"){
+		background: none;
+	}
+	@include media("<phone"){
+		padding: 23px 0 34px;
+	}
+	&__holder{
+		max-width: 715px;
+		margin: 0 0 0 auto;
+	}
+	.accordeon{
+		counter-reset: list;
+		padding-bottom: 20px;
+		border-bottom: 1px solid $mercury;
+		margin-bottom: 20px;
+		dl{
+			margin: 0;
+			background-color: $white;
+			position: relative;
+			&:after{
+				counter-increment: list;
+				content: "" counter(list, decimal-leading-zero);
+				position: absolute;
+				top: 12px;
+				left: 0;
+				font-size: 17px;
+				font-weight: bold;
+				width: 50px;
+				height: 26px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: $blue;
+				border-right: 1px solid #C4C4C4;
+			}
+		}
+		dl + dl{
+			margin-top: 9px;
+			@include media("<phone"){
+				margin-top: 9px;
+			}
+		}
+		dt{
+			position: relative;
+			border: 1px solid #e5e5e5;
+			padding: 13px 55px 13px 50px;
+			margin: 0;
+			cursor: pointer;
+			@include media("<phone"){
+				padding: 13px 55px 13px 50px;
+			}
+		}
+		dt:after{
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 18px;
+			transform: translate(0, -50%) rotate(0.01deg);
+			width: 14px;
+			height: 8px;
+			background: url(../images/arrow-acardeon-blue.svg) no-repeat;
+			background-size: 100% auto;
+			transition: all 0.5s;
+			@include media("<phone"){
+				right: 14px;
+			}
+		}
+		dt.active{
+			background: $blue;
+		}
+		dl.curretn dt{
+
+		}
+		.current{
+			margin: 9px -20px 0;
+			@include media("<phone"){
+				margin: 9px 0 0;
+			}
+			&:after{
+				color: #fff;
+			}
+			dt{
+				background: $blue;
+				strong{
+					color: #fff;
+				}
+				&:after{
+					background: url(../images/arrow-acardeon-white.svg) no-repeat;
+					background-size: 100% auto;
+					transform: translate(0, -50%) rotate3d(1, 0, 0, 180deg);
+				}
+			}
+			
+		}
+		dt.active strong{
+			color: #fff;
+		}
+		dl.active:after{
+			color: #fff;
+		}
+		dl.active{
+			margin-left: -20px;
+			margin-right: -20px;
+			@include media("<phone"){
+				margin-left: 0px;
+				margin-right:0px;
+			}
+		}
+		dt.active:after{
+			background: url(../images/arrow-acardeon-white.svg) no-repeat;
+			background-size: 100% auto;
+			transform: translate(0, -50%) rotate3d(1, 0, 0, 180deg);
+		}
+		dt span{
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 14px;
+			line-height: 32px;
+			font-weight: 400;
+			text-transform: uppercase;
+		}
+		dt .ico{
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 0;
+			line-height: 0;
+			text-align: center;
+			width: 32px;
+			height: 32px;
+			margin: 0 8px 0 0;
+		}
+		dt strong{
+			font-size: 17px;
+			line-height: 20px;
+			font-weight: bold;
+			margin-left: 12px;
+		}
+		dd{
+			position: relative;
+			margin: -1px 0 0;
+			border: 1px solid #e5e5e5;
+			padding: 24px 57px;
+			font-size: 14px;
+			line-height: 25px;
+			color: $gray;
+			font-weight: 300;
+			font-style: normal;
+			@include media("<phone"){
+				font-size: 17px;
+				line-height: 20px;
+				padding: 22px 14px 22px 50px;
+			}
+		}
+		dd p{
+			margin: 0 0 30px;
+			@include media("<phone"){
+				margin: 0 0 16px;
+			}
+		}
+		dd p:last-child{
+			margin: 0;
+		}
+		dd .content{}
+	}
+}
+.news{
+	&__page{
+		padding: 45px 0 50px;
+	}
+	.h2{
+		margin-bottom: 30px;
+	}
+	&__holder-list{
+		text-align: center;
+		padding-bottom: 30px;
+		border-bottom: 1px solid $mercury;
+		margin-bottom: 30px;
+		.economy__list{
+			margin: 0 -10px 30px;
+		}
+		.btn{
+			min-width: 179px;
+		}
+	}
+	&__years-list{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 28px;
+		.link{
+			display: block;
+			font-size: 15px;
+			line-height: 22px;
+			padding: 8px 28px;
+			border: 1px solid transparent;
+			transition: .3s;
+			&:hover,
+			&:active{
+				border: 1px solid rgba(0, 0, 0, 0.344)
+			}
+		}
+		.active{
+			border: 1px solid rgba(0, 0, 0, 0.344)
+		}
+	}
+	&__months-list{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 28px;
+		.link{
+			display: block;
+			font-size: 15px;
+			line-height: 22px;
+			padding: 8px 24px;
+			border: 1px solid transparent;
+			transition: .3s;
+			&:hover,
+			&:active{
+				border: 1px solid rgba(0, 0, 0, 0.344)
+			}
+		}
+		.active{
+			border: 1px solid rgba(0, 0, 0, 0.344)
+		}
+	}
+	&__filter-item{
+		.flex-container{
+			display: flex;
+		}
+	}
+	&__select-years{
+		margin-bottom: 20px;
+		margin-right: 20px;
+		width: 100%;
+		.jcf-select-opener{
+			width: 30px;
+			background: $blue;
+			&:before{
+				border-color: $white;
+			}
+		}
+		.jcf-select.jcf-drop-active .jcf-select-opener:before{
+			border-color: $white;
+		}
+	}
+	&__select-month{
+		margin-bottom: 20px;
+		width: 100%;
+		.jcf-select-opener{
+			width: 30px;
+			background: $blue;
+			&:before{
+				border-color: $white;
+			}
+		}
+		.jcf-select.jcf-drop-active .jcf-select-opener:before{
+			border-color: $white;
+		}
+	}
+	&__slider{
+		margin: 0 -10px;
+		.partners__slider-item{
+			width: 100%;
+			max-width: 420px;
+			@include media("<450px"){
+				max-width: 360px;
+			}
+		}
+	}
+	&__slider-holder{
+		width: 100%;
+		padding: 0;
+	}
+
 }
