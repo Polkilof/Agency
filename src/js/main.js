@@ -171,8 +171,8 @@ function validateFields(){
 				myEmail: true,
 			},
 			phone: {
-				required: false,
-				myPhone: false,
+				required: true,
+				myPhone: true,
 			},
 			message: {
 				required: false,
@@ -196,65 +196,6 @@ function validateFields(){
 			phone: {
 				required: false,
 				myPhone: false,
-			},
-			message: {
-				required: false,
-				minlength: false,
-			}
-		}
-	});
-	$("._validate2").validate({
-		highlight: function(element) {
-			$(element).parent().addClass('form__box_error').removeClass('form__box_valid');
-		},
-		unhighlight: function(element) {
-			$(element).parent().removeClass('form__box_error').addClass('form__box_valid');
-		},
-		rules: {
-			request: {
-				required: false,
-			},
-			companyname: {
-				required: true,
-				minlength: 0,
-			},
-			email: {
-				required: true,
-				myEmail: true,
-			},
-			country: {
-				required: true,
-				minlength: 0,
-			},
-			question: {
-				required: true,
-				minlength: 0,
-			},
-			message: {
-				required: true,
-				minlength: 0,
-			},
-		},
-		messages: {
-			request: {
-				required: false,
-			},
-			companyname: {
-				required: false,
-				minlength: false,
-			},
-			email: {
-				required: false,
-				email: false,
-				myEmail: false,
-			},
-			country: {
-				required: false,
-				minlength: false,
-			},
-			question: {
-				required: false,
-				minlength: false,
 			},
 			message: {
 				required: false,
