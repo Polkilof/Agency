@@ -1446,12 +1446,9 @@ body {
   position: relative;
   background: #fff;
   color: #000;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1.5;
   font-weight: 300; }
-  @media (max-width: 767px) {
-    body {
-      font-size: 14px; } }
 
 input,
 textarea,
@@ -3425,7 +3422,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
         margin-bottom: 18px;
         margin-right: 10px; }
       .contact__info .footer-links__list .footer-links__link {
-        font-size: 16px;
+        font-size: 17px;
         line-height: 1.5;
         color: #343434;
         font-weight: 700;
@@ -3435,6 +3432,10 @@ body > .jcf-select-drop.jcf-drop-flipped {
       .contact__info .footer-links__list .footer-links__link-ico {
         width: 26px;
         min-width: 26px; }
+
+@media (max-width: 767px) {
+  .form-group .btn {
+    width: 100%; } }
 
 .map {
   display: block;
@@ -3539,7 +3540,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
         margin-bottom: 20px; } }
     .investment__filter-title {
       white-space: nowrap;
-      font-size: 16px;
+      font-size: 17px;
       line-height: 30px;
       color: #000;
       font-weight: 700; }
@@ -3550,6 +3551,11 @@ body > .jcf-select-drop.jcf-drop-flipped {
         .investment__filter-title {
           width: 100%;
           margin-bottom: 4px; } }
+    .investment__filter .jcf-select {
+      max-width: 270px !important; }
+      @media (max-width: 767px) {
+        .investment__filter .jcf-select {
+          max-width: 100% !important; } }
   .investment__content {
     text-align: center; }
   .investment__list {
@@ -3606,7 +3612,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
     bottom: 20px;
     color: #fff;
     display: block;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.5;
     font-weight: 700;
     padding: 8px 18px;
@@ -3657,7 +3663,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
     display: -ms-flexbox;
     display: flex;
     margin-bottom: 4px;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 20px;
     font-weight: 400;
     color: #343434; }
@@ -3694,7 +3700,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
       font-size: 28px; }
     .investment__price small {
       display: block;
-      font-size: 16px;
+      font-size: 17px;
       line-height: 1.5;
       font-weight: 300;
       color: #343434;
@@ -3704,7 +3710,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
           max-width: auto; } }
   .investment__footage {
     display: block;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.5;
     font-weight: 700;
     color: #343434;
@@ -3713,7 +3719,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
       font-size: 20px; }
     .investment__footage small {
       display: block;
-      font-size: 16px;
+      font-size: 17px;
       line-height: 1.5;
       font-weight: 300;
       color: #343434;
@@ -3808,7 +3814,8 @@ body > .jcf-select-drop.jcf-drop-flipped {
     margin: 0;
     padding: 0;
     list-style: none;
-    overflow: hidden; }
+    overflow: hidden;
+    min-width: 230px; }
     .investment-inner__list._column {
       -webkit-columns: 2;
          -moz-columns: 2;
@@ -4487,7 +4494,8 @@ textarea.form__control {
     width: 50%; }
     @media (max-width: 991px) {
       .south__box-img {
-        margin: 0 auto; } }
+        margin: 0 auto;
+        margin-top: 17px; } }
     @media (max-width: 767px) {
       .south__box-img {
         width: 100%; } }
@@ -4508,7 +4516,8 @@ textarea.form__control {
     margin-bottom: 40px; }
     @media (max-width: 991px) {
       .south .h2 {
-        margin-bottom: 20px; } }
+        margin-bottom: 20px;
+        text-align: center; } }
   .south .row {
     margin: 0 0 56px; }
     @media (max-width: 991px) {
@@ -4529,6 +4538,9 @@ textarea.form__control {
   .south figcaption {
     margin-top: 10px;
     font-style: italic; }
+    @media (max-width: 991px) {
+      .south figcaption {
+        text-align: center; } }
   .south__pdf-file {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4722,9 +4734,9 @@ textarea.form__control {
   max-width: 400px;
   width: 100%;
   background: #fff;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 25px;
-  font-weight: 500;
+  font-weight: 700;
   padding: 12px 20px 12px 12px;
   color: #000;
   cursor: pointer;
@@ -4813,6 +4825,7 @@ textarea.form__control {
     background: #fff;
     font-size: 15px;
     line-height: 20px;
+    font-weight: 500;
     padding: 10px 5px 10px 5px;
     -webkit-transition: .3s;
     -o-transition: .3s;
@@ -4855,6 +4868,9 @@ textarea.form__control {
 
 .data h2 {
   margin-bottom: 40px; }
+  @media (max-width: 991px) {
+    .data h2 {
+      text-align: center; } }
 
 .data .h5 {
   margin-bottom: 4px; }
@@ -4915,7 +4931,7 @@ textarea.form__control {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 20px; }
+    margin-bottom: 15px; }
     @media (max-width: 991px) {
       .data__transport-list .transport-content {
         -webkit-box-orient: vertical;
@@ -4937,7 +4953,7 @@ textarea.form__control {
     @media (max-width: 991px) {
       .data__transport-list .box-ico {
         margin-right: 0;
-        margin-bottom: 19px; } }
+        margin-bottom: 0px; } }
 
 .data__publice .box-ico {
   max-width: 95px; }
@@ -5155,9 +5171,9 @@ textarea.form__control {
     display: block;
     font-size: 17px;
     line-height: 21px; }
-  .economy__paragraph {
+  .economy__paragraph, .economy p {
     display: block;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 21px;
     font-weight: 300; }
   .economy__date {
@@ -5409,9 +5425,14 @@ textarea.form__control {
   border-bottom: 1px solid #E9E9E9;
   margin-bottom: 30px; }
   .news__holder-list .economy__list {
-    margin: 0 -10px 30px; }
+    margin: 0 -10px 30px;
+    text-align: left; }
   .news__holder-list .btn {
     min-width: 179px; }
+    @media (max-width: 767px) {
+      .news__holder-list .btn {
+        min-width: auto;
+        width: 100%; } }
 
 .news__years-list {
   display: -webkit-box;

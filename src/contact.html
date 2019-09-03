@@ -52,7 +52,7 @@
 										<input type="text" placeholder="Nume" class="form__control" name="username" id="username" minlength="2" required>
 									</div>
 									<div class="form__box">
-										<input type="text" id="phone" name="phone" placeholder="Telefon" class="form__control" required>
+										<input type="text" id="phone" name="phone" placeholder="Telefon" class="form__control" required oninput="this.value = this.value.replace(/[^0-9.]/g, '');">
 									</div>
 									<div class="form__box">
 										<textarea id="message" name="message" class="form__control" placeholder="Mesajul Dumneavoastră"></textarea>

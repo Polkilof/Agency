@@ -754,7 +754,7 @@ body>.jcf-select-drop.jcf-drop-flipped {
 				margin-right: 10px;
 			}
 			.footer-links__link{
-				font-size: 16px;
+				font-size: 17px;
 				line-height: 1.5;
 				color: $gray;
 				font-weight: 700;
@@ -771,6 +771,14 @@ body>.jcf-select-drop.jcf-drop-flipped {
 	}
 	&__form{}
 }
+.form-group{
+	.btn{
+		@include media("<phone"){
+			width: 100%;
+		}
+	}
+}
+
 
 .map{
 	display: block;
@@ -869,7 +877,7 @@ body>.jcf-select-drop.jcf-drop-flipped {
 		}
 		&-title{
 			white-space: nowrap;
-			font-size: 16px;
+			font-size: 17px;
 			line-height: 30px;
 			color: $black;
 			font-weight: 700;
@@ -879,6 +887,12 @@ body>.jcf-select-drop.jcf-drop-flipped {
 			@include media("<phone"){
 				width: 100%;
 				margin-bottom: 4px;
+			}
+		}
+		.jcf-select{
+			max-width: 270px !important;
+			@include media("<phone"){
+				max-width: 100% !important;
 			}
 		}
 	}
@@ -940,7 +954,7 @@ body>.jcf-select-drop.jcf-drop-flipped {
 		bottom: 20px;
 		color: $white;
 		display: block;
-		font-size: 16px;
+		font-size: 17px;
 		line-height: 1.5;
 		font-weight: 700;
 		padding: 8px 18px;
@@ -984,7 +998,7 @@ body>.jcf-select-drop.jcf-drop-flipped {
 	&__descr-list{
 		display: flex;
 		margin-bottom: 4px;
-		font-size: 16px;
+		font-size: 17px;
 		line-height: 20px;
 		font-weight: 400;
 		color: $gray;
@@ -1017,7 +1031,7 @@ body>.jcf-select-drop.jcf-drop-flipped {
 		}
 		small{
 			display: block;
-			font-size: 16px;
+			font-size: 17px;
 			line-height: 1.5;
 			font-weight: 300;
 			color: $gray;
@@ -1029,7 +1043,7 @@ body>.jcf-select-drop.jcf-drop-flipped {
 	}
 	&__footage{
 		display: block;
-		font-size: 16px;
+		font-size: 17px;
 		line-height: 1.5;
 		font-weight: 700;
 		color: $gray;
@@ -1039,7 +1053,7 @@ body>.jcf-select-drop.jcf-drop-flipped {
 		}
 		small{
 			display: block;
-			font-size: 16px;
+			font-size: 17px;
 			line-height: 1.5;
 			font-weight: 300;
 			color: $gray;
@@ -1136,6 +1150,7 @@ body>.jcf-select-drop.jcf-drop-flipped {
 		padding: 0;
 		list-style: none;
 		overflow: hidden;
+		min-width: 230px;
 		&._column{
 			columns: 2;
 			@include media("<phone"){

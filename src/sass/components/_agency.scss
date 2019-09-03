@@ -16,6 +16,7 @@
 		width: 50%;
 		@include media('<tablet'){
 			margin: 0 auto;
+			margin-top: 17px;
 		}
 		@include media('<phone'){
 			width: 100%;
@@ -40,6 +41,7 @@
 		margin-bottom: 40px;
 		@include media('<tablet'){
 			margin-bottom: 20px;
+			text-align: center;
 		}
 	}
 	.row{
@@ -67,6 +69,9 @@
 	figcaption{
 		margin-top: 10px;
 		font-style: italic;
+		@include media('<tablet'){
+			text-align: center;
+		}
 	}
 	&__pdf-file{
 		display: flex;
@@ -243,9 +248,9 @@
 		max-width: 400px;
 		width: 100%;
 		background: #fff;
-		font-size: 18px;
+		font-size: 17px;
 		line-height: 25px;
-		font-weight: 500;
+		font-weight: 700;
 		padding: 12px 20px 12px 12px;
 		color: #000;
 		cursor: pointer;
@@ -337,6 +342,7 @@
 			background: #fff;
 			font-size: 15px;
 			line-height: 20px;
+			font-weight: 500;
 			padding: 10px 5px 10px 5px;
 			transition: .3s;
 			@include media('<tablet'){
@@ -389,6 +395,9 @@
 .data{
 	h2{
 		margin-bottom: 40px;
+		@include media('<tablet'){
+			text-align: center;
+		}
 	}
 	.h5{
 		margin-bottom:4px;
@@ -446,7 +455,7 @@
 		border-bottom: 1px solid $mercury;
 		.transport-content{
 			display: flex;
-			margin-bottom:20px ;
+			margin-bottom:15px ;
 			@include media('<tablet'){
 				flex-direction: column;
 				align-items: center;
@@ -465,7 +474,7 @@
 			margin-right: 18px;
 			@include media('<tablet'){
 				margin-right: 0;
-				margin-bottom: 19px;
+				margin-bottom: 0px;
 			}
 		}
 	}
@@ -636,7 +645,6 @@
 		@include media('<tablet'){
 			margin-bottom: 24px;
 		}
-
 	}
 	.col{
 		@include media('<tablet'){
@@ -674,9 +682,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		margin: 0 -10px 45px;
-		@include media('<tablet'){
-
-		}
+		@include media('<tablet'){}
 	}
 	&__item{
 		width: 33.333%;
@@ -731,9 +737,9 @@
 		font-size: 17px;
 		line-height: 21px;
 	}
-	&__paragraph{
+	&__paragraph, p{
 		display: block;
-		font-size: 17px;
+		font-size: 16px;
 		line-height: 21px;
 		font-weight: 300;
 	}
@@ -771,7 +777,6 @@
 	}
 	.h2{
 		margin-bottom: 26px;
-
 	}
 	&__inner-box-img{
 		display: block;
@@ -1009,9 +1014,14 @@
 		margin-bottom: 30px;
 		.economy__list{
 			margin: 0 -10px 30px;
+			text-align: left;
 		}
 		.btn{
 			min-width: 179px;
+			@include media("<phone"){
+				min-width: auto;
+				width: 100%;
+			}
 		}
 	}
 	&__years-list{
