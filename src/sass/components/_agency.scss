@@ -11,9 +11,11 @@
 		}
 	}
 	&__box-img{
-		border-top:11px solid $blue;
+		position: relative;
+		border-top: 11px solid $blue;
 		margin-right: 26px;
 		width: 50%;
+		padding-bottom: 35px;
 		@include media('<tablet'){
 			margin: 0 auto;
 			margin-top: 17px;
@@ -45,7 +47,7 @@
 		}
 	}
 	.row{
-		margin: 0 0 56px;
+		margin: 0 0 24px;
 		@include media('<tablet'){
 			margin: 0 0 12px;
 		}
@@ -67,6 +69,10 @@
 		}
 	}
 	figcaption{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
 		margin-top: 10px;
 		font-style: italic;
 		@include media('<tablet'){
@@ -736,6 +742,7 @@
 		display: block;
 		font-size: 17px;
 		line-height: 21px;
+		font-weight: 700;
 	}
 	&__paragraph, p{
 		display: block;
@@ -977,7 +984,7 @@
 			margin: -1px 0 0;
 			border: 1px solid #e5e5e5;
 			padding: 24px 57px;
-			font-size: 14px;
+			font-size: 17px;
 			line-height: 25px;
 			color: $gray;
 			font-weight: 300;

@@ -1438,7 +1438,8 @@ html {
   background: #fff;
   -webkit-text-size-adjust: none;
   -ms-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased; }
 
 body {
   min-height: 100%;
@@ -4489,9 +4490,11 @@ textarea.form__control {
             -ms-flex-direction: column;
                 flex-direction: column; } }
   .south__box-img {
+    position: relative;
     border-top: 11px solid #1C2D72;
     margin-right: 26px;
-    width: 50%; }
+    width: 50%;
+    padding-bottom: 35px; }
     @media (max-width: 991px) {
       .south__box-img {
         margin: 0 auto;
@@ -4519,7 +4522,7 @@ textarea.form__control {
         margin-bottom: 20px;
         text-align: center; } }
   .south .row {
-    margin: 0 0 56px; }
+    margin: 0 0 24px; }
     @media (max-width: 991px) {
       .south .row {
         margin: 0 0 12px; } }
@@ -4536,6 +4539,10 @@ textarea.form__control {
         .south__paragraph_mb {
           margin-bottom: 12px; } }
   .south figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     margin-top: 10px;
     font-style: italic; }
     @media (max-width: 991px) {
@@ -5170,7 +5177,8 @@ textarea.form__control {
   .economy__title {
     display: block;
     font-size: 17px;
-    line-height: 21px; }
+    line-height: 21px;
+    font-weight: 700; }
   .economy__paragraph, .economy p {
     display: block;
     font-size: 16px;
@@ -5395,7 +5403,7 @@ textarea.form__control {
       margin: -1px 0 0;
       border: 1px solid #e5e5e5;
       padding: 24px 57px;
-      font-size: 14px;
+      font-size: 17px;
       line-height: 25px;
       color: #343434;
       font-weight: 300;
