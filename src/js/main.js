@@ -23,9 +23,19 @@ function initPage(){
 	slideForOurNav();
 
 	$('[data-fancybox], .fancybox').fancybox({
+		btnTpl: {
+			arrowLeft:
+				'<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}">' +
+				'<svg width="24" height="98" viewBox="0 0 24 98" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="22.4035" y1="0.667631" x2="0.919508" y2="49.0331" stroke="currentColor" stroke-width="2"/><path d="M1.27539 48.6555L22.235 97.4046" stroke="currentColor" stroke-width="2"/></svg>' +
+				"</button>",
+			arrowRight:
+				'<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}">' +
+				'<svg width="25" height="98" viewBox="0 0 25 98" fill="none" xmlns="http://www.w3.org/2000/svg"><line y1="-1" x2="52.9178" y2="-0.305155" transform="matrix(0.393919 0.919145 0.919145 -0.393919 2.75 0.273712)" stroke="currentColor" stroke-width="2"/><path d="M22.959 48.6555L1.99942 97.4046" stroke="currentColor" stroke-width="2"/></svg>' +
+				"</button>",
+		},
 		onInit: function(instance, slide){
 			validateFields();
-		}
+		},
 	});
 }
 
@@ -59,13 +69,21 @@ function mobileMenu(){
 }
 
 function accordeon(){
-	$(".accordeon dd").hide().prev().click(function() {
-		$(".accordeon dl.current").removeClass("current");
-		$(this).parents(".accordeon").find("dd").not(this).slideUp().prev().removeClass("active").parents("dl").removeClass("active");
-		$(this).next().not(":visible").slideDown().prev().addClass("active").parents("dl").addClass("active");
-
-	});
-	$(".accordeon dl.current dd").show();
+	if ( $(window).width() < 992 ) {
+		$(".accordeon dd").hide().prev().click(function() {
+			$(".accordeon dl.current").removeClass("current");
+			$(this).parents(".accordeon").find("dd").not(this).slideUp().prev().removeClass("active").parents("dl").removeClass("active");
+			$(this).next().not(":visible").slideDown().prev().addClass("active").parents("dl").addClass("active");
+		});
+		$(".accordeon dl.current dd").show();
+	} else {
+		$(".accordeon dd").hide().prev().click(function() {
+			$(".accordeon dl.current").removeClass("current");
+			$(this).parents(".accordeon").find("dd").not(this).hide().prev().removeClass("active").parents("dl").removeClass("active");
+			$(this).next().not(":visible").show().prev().addClass("active").parents("dl").addClass("active");
+		});
+		$(".accordeon dl.current dd").show();
+	}
 }
 
 function tabs(){

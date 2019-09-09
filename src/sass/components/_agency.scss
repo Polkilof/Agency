@@ -263,7 +263,6 @@
 		border-top: 1px solid #BDBDBD;
 		border-right: 1px solid #BDBDBD;
 		border-left: 1px solid #BDBDBD;
-
 		transition: .3s;
 		@include media('<tablet'){
 			max-width: initial;
@@ -273,6 +272,15 @@
 		&:last-child{
 			dt{
 				border-bottom: 1px solid #BDBDBD;
+			}
+		}
+		&.current, &.active{
+			dd{
+				@include media('>tablet'){
+					opacity: 1;
+					visibility: visible;
+					display: block !important;
+				}
 			}
 		}
 	}
@@ -295,6 +303,11 @@
 		right: 0;
 		left: 400px;
 		bottom: 0;
+		@include media('>tablet'){
+			opacity: 0;
+			visibility: hidden;
+			transition: all .3s;
+		}
 		@include media('<tablet'){
 			position: relative;
 			top: auto;
@@ -387,15 +400,12 @@
 }
 
 .invest{
-
 	.row{
 		margin: 0 0 10px;
 	}
 	.img-holder{
 		padding-bottom: 65%;
 	}
-	
-
 }
 
 .data{
@@ -822,19 +832,27 @@
 		line-height: 20px;
 		font-weight: normal;
 		max-width: 132px;
-		padding: 5px 9px;
+		padding: 4px 9px;
 		background: $blue;
+		border: 1px solid $blue;
 		text-align: left;
 		color: $white;
+		transition: all .2s ease;
 		&:before{
 			content: '';
 			display: inline-block;
 			vertical-align: top;
-			background: url(../images/facebook.svg) no-repeat;
+			background: $blue url(../images/facebook.svg) no-repeat;
 			background-size: 100% auto;
 			width: 27px;
 			height: 27px;
+			border-radius: 5px;
 			margin-right: 10px;
+		}
+		&:hover{
+			background: $white;
+			border-color: $blue;
+			color: $blue;
 		}
 	}
 }
