@@ -390,6 +390,16 @@ body>.jcf-select-drop.jcf-drop-flipped {
 		}
 	}
 }
+.js_tabs,.info-nav{
+	&:not(.slick-initialized) {
+		opacity: 0;
+		display: flex;
+		flex-flow: row nowrap;
+	}
+	.slick-track, .slick-list{
+		overflow: visible;
+	}
+}
 .slider{
 	position: relative;
 	z-index: 2;

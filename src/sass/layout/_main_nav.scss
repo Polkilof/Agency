@@ -64,12 +64,12 @@
 	&__item{
 		position: relative;
 		display: block;
-		margin-right: 90px;
+		margin-right: 50px;
 		@include media("<desktop_lg"){
-			margin-right: 7vw;
+			margin-right: 4vw;
 		}
 		@include media("<desktop"){
-			margin-right: 3vw;
+			margin-right: 2vw;
 		}
 		@include media("<tablet"){
 			margin-right: 0;

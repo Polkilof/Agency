@@ -1846,6 +1846,10 @@ p {
   overflow: hidden;
   text-indent: -9999px;
   margin: 0; }
+  @media (max-width: 1199px) {
+    .logo {
+      width: 186px;
+      margin: 0; } }
   @media (max-width: 991px) {
     .logo {
       width: 130px;
@@ -2040,13 +2044,13 @@ p {
   .main-nav__item {
     position: relative;
     display: block;
-    margin-right: 90px; }
+    margin-right: 50px; }
     @media (max-width: 1399px) {
       .main-nav__item {
-        margin-right: 7vw; } }
+        margin-right: 4vw; } }
     @media (max-width: 1199px) {
       .main-nav__item {
-        margin-right: 3vw; } }
+        margin-right: 2vw; } }
     @media (max-width: 991px) {
       .main-nav__item {
         margin-right: 0; } }
@@ -3057,6 +3061,19 @@ body > .jcf-select-drop.jcf-drop-flipped {
         .visual__btn .btn {
           width: 100%;
           margin: 0 0 12px; } }
+
+.js_tabs:not(.slick-initialized), .info-nav:not(.slick-initialized) {
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap; }
+
+.js_tabs .slick-track, .js_tabs .slick-list, .info-nav .slick-track, .info-nav .slick-list {
+  overflow: visible; }
 
 .slider {
   position: relative;
