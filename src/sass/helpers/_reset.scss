@@ -229,7 +229,7 @@ h3, .h3{
 	@include media("<desktop"){}
 	@include media("<tablet"){}
 	@include media("<phone"){
-		font-size: 20px;
+		//font-size: 20px;
 	}
 	&._center{
 		text-align: center;
@@ -256,9 +256,8 @@ h4, .h4{
 }
 h5, .h5{
 	display: block;
-    font-size: 20px;
-    line-height: 30px;
-   
+	font-size: 20px;
+	line-height: 30px;
 }
 
 p{margin: $paragraph-spacing;}

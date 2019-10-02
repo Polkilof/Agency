@@ -755,13 +755,22 @@ body>.jcf-select-drop.jcf-drop-flipped {
 			margin-bottom: 2px;
 		}
 		.footer-links__list{
-			column-count: 2;
+			//column-count: 2;
+			display: inline-flex;
+			max-width: 400px;
+			flex-flow: row wrap;
 			@include media('<desktop'){
-				column-count: 1;
+				//column-count: 1;
+				max-width: 100%;
+				flex-flow: column;
 			}
 			.footer-links__item{
+				flex: 0 1 188px;
 				margin-bottom: 18px;
 				margin-right: 10px;
+				@include media('<desktop'){
+					flex: 1 1 auto;
+				}
 			}
 			.footer-links__link{
 				font-size: 17px;
@@ -1440,8 +1449,8 @@ body>.jcf-select-drop.jcf-drop-flipped {
 		outline: none;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-		opacity: 1;
-		transition: opacity .3s ease-in-out;
+		opacity: 0.9;
+		transition: opacity .3s ease-in-out, background .2s ease-in-out;
 		z-index: 20;
 		@include media("<phone"){
 			width: 45px;
@@ -1454,6 +1463,9 @@ body>.jcf-select-drop.jcf-drop-flipped {
 	.slick-prev{
 		background: linear-gradient(90deg, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0) 100%);
 		left: 0;
+		&:hover{
+			background: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+		}
 		@include media("<phone"){
 			left: 0;
 		}
@@ -1473,6 +1485,9 @@ body>.jcf-select-drop.jcf-drop-flipped {
 	.slick-next{
 		background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.42) 100%);
 		right: 0;
+		&:hover{
+			background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+		}
 		@include media("<phone"){
 			right: 0;
 		}
@@ -1520,4 +1535,25 @@ body>.jcf-select-drop.jcf-drop-flipped {
 		max-width: 532px;
 		margin: 0 auto 40px;
 	}
+}
+
+
+.fancybox-button svg{
+	width: auto;
+	height: auto;
+}
+.fancybox-button svg path{
+	stroke-width: 2;
+	fill: currentColor;
+}
+.fancybox-navigation .fancybox-button--arrow_right{
+	padding: 1px 16px 1px 26px;
+	background-color: transparent;
+}
+.fancybox-navigation .fancybox-button--arrow_right svg{
+	margin: 0 0 0 auto;
+}
+.fancybox-navigation .fancybox-button--arrow_left{
+	background-color: transparent;
+	padding: 1px 26px 1px 16px;
 }
